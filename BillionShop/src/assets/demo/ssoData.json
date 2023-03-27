@@ -1,0 +1,46 @@
+[{
+        "itm_code": "0000000001",
+        "itm_name": "เลย์ รส ดั้งเดิม",
+        "itm_capacity": "75",
+        "itm_unit": "กรัม",
+        "rd_itm_quatity": "63",
+        "itm_sell_unit": "ห่อ",
+        "st_sale": "1000.00"
+    },
+    {
+        "itm_code": "0000000002",
+        "itm_name": "เลย์ รส บาร์บีคิว",
+        "itm_capacity": "75",
+        "itm_unit": "กรัม",
+        "rd_itm_quatity": "63",
+        "itm_sell_unit": "ห่อ",
+        "st_sale": "1000.00"
+    },
+    {
+        "itm_code": "0000000003",
+        "itm_name": "เลย์ รส โนริสาหร่าย",
+        "itm_capacity": "75",
+        "itm_unit": "กรัม",
+        "rd_itm_quatity": "63",
+        "itm_sell_unit": "ห่อ",
+        "st_sale": "1000.00"
+    },
+    {
+        "itm_code": "0000000004",
+        "itm_name": "เลย์ รส ใบกะเพรา",
+        "itm_capacity": "75",
+        "itm_unit": "กรัม",
+        "rd_itm_quatity": "63",
+        "itm_sell_unit": "ห่อ",
+        "st_sale": "1000.00"
+    },
+    {
+        "itm_code": "0000000005",
+        "itm_name": "เป็ปซี่",
+        "itm_capacity": "1.25",
+        "itm_unit": "ลิตร",
+        "rd_itm_quatity": "63",
+        "itm_sell_unit": "ขวด",
+        "st_sale": "1000.00"
+    }
+]

@@ -1,0 +1,56 @@
+<ion-app>
+    <div class="ion-page">
+        <app-header-with-back-search-no-scan (ionChange)="search($event)"></app-header-with-back-search-no-scan>
+        <ion-content>
+            <ion-grid>
+                <ion-row>
+                    <ion-col size="12">
+                        <ion-grid *ngIf="showListItem; else alertNotFound">
+                            <ion-row>
+                                <ion-col size="6" *ngFor="let itm of srchItem">
+                                    <ion-card button (click)="chooseItem(itm.itm_id)">
+                                        <ion-card-header>
+                                            <ion-img [src]="itm.img"></ion-img>
+                                        </ion-card-header>
+                                        <ion-card-content>
+                                            <ion-grid>
+                                                <ion-row>
+                                                    <ion-col>
+                                                        รหัสสินค้า :
+                                                    </ion-col>
+                                                </ion-row>
+
+                                                <ion-row>
+                                                    <ion-col>
+                                                        {{itm.itm_code}}
+                                                    </ion-col>
+                                                </ion-row>
+
+                                                <ion-row>
+                                                    <ion-col>
+                                                        ชื่อสินค้า :
+                                                    </ion-col>
+                                                </ion-row>
+
+                                                <ion-row>
+                                                    <ion-col class="textoverflow">
+                                                        {{itm.itm_name}} {{itm.itm_capacity}} {{itm.itm_unit}}
+                                                    </ion-col>
+                                                </ion-row>
+                                            </ion-grid>
+                                        </ion-card-content>
+                                    </ion-card>
+                                </ion-col>
+                            </ion-row>
+                        </ion-grid>
+                        <ng-template #alertNotFound>
+                            <ion-card-content class="alert-notfind">
+                                ไม่พบข้อมูลที่ค้นหา
+                            </ion-card-content>
+                        </ng-template>
+                    </ion-col>
+                </ion-row>
+            </ion-grid>
+        </ion-content>
+    </div>
+</ion-app>

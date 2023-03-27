@@ -1,0 +1,29 @@
+.font {
+    font-family: Roboto;
+    color: black;
+    #large-font {
+        font-size: 18px;
+    }
+    #normal-font {
+        font-size: 16px;
+    }
+    #small-font {
+        font-size: 14px;
+    }
+}
+
+hr {
+    height: 1px !important;
+    width: 100%!important;
+    background: black !important;
+    display: block !important;
+    font-size: 2em !important;
+    opacity: 1 !important;
+    visibility: visible !important;
+    margin-bottom: 5px;
+}
+
+ion-item {
+    --padding-end: 0px;
+    --inner-padding-end: 0px;
+}

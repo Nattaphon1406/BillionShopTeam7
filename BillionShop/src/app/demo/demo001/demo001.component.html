@@ -1,0 +1,78 @@
+<ion-app>
+    <div class="ion-page">
+        <app-header-with-menu (ionChange)="search($event)"></app-header-with-menu>
+        <app-menu-ham></app-menu-ham>
+        <ion-content>
+            <ion-grid>
+                <ion-row>
+                    <ion-col size="12">
+                        <ion-grid *ngIf="testShow; else testEmp">
+                            <ion-row>
+                                <ion-col size="6" *ngFor="let itm of srchItem">
+                                    <ion-card>
+                                        <ion-card-header>
+                                            <!-- <ion-card-subtitle>Card Subtitle</ion-card-subtitle>
+                      <ion-card-title>Card Title</ion-card-title> -->
+                                            <ion-img [src]="itm.itemImg"></ion-img>
+                                            <button (click)="openCamera()"></button>
+                                            <!-- <edit-config target="NSCameraUsageDescription" file="*-Info.plist" mode="merge">
+                        <string>need camera access to take pictures</string>
+                    </edit-config> -->
+                                        </ion-card-header>
+                                        <ion-card-content>
+                                            <ion-grid>
+                                                <ion-row>
+                                                    <ion-col>
+                                                        รหัสสินค้า : {{itm.itemCode}}
+                                                    </ion-col>
+                                                </ion-row>
+                                                <ion-row>
+                                                    <ion-col>
+                                                        ชื่อสินค้า : {{itm.itemDesc}}
+                                                    </ion-col>
+                                                </ion-row>
+                                                <ion-row>
+                                                    <ion-col>
+                                                        จำนวน : {{itm.itemQty}}
+                                                    </ion-col>
+                                                </ion-row>
+                                                <ion-row>
+                                                    <ion-col>
+                                                        <div style="text-align:right">
+                                                            <button class="btn-edit">
+                                <ion-icon name="pencil-outline" (click)="edit(itm.itemCode)"
+                                  [routerLink]="['demo00101',itm.itemCode]"></ion-icon>
+                              </button>
+                                                        </div>
+                                                    </ion-col>
+                                                </ion-row>
+                                            </ion-grid>
+                                        </ion-card-content>
+                                    </ion-card>
+                                </ion-col>
+                            </ion-row>
+                        </ion-grid>
+                        <ng-template #testEmp>
+                            <ion-card style="width: auto; height: 200px; text-align: center;">
+                                <ion-card-content style="text-align: center; font-size: 30px">
+                                    No Data
+                                </ion-card-content>
+                            </ion-card>
+                        </ng-template>
+                    </ion-col>
+                </ion-row>
+            </ion-grid>
+        </ion-content>
+        <ion-toolbar>
+            <ion-grid>
+                <ion-row>
+                    <ion-col size="10" offset="1">
+                        <div>
+                            <button class="btn-add" (click)="btnAdd()">เพิ่มสินค้า</button>
+                        </div>
+                    </ion-col>
+                </ion-row>
+            </ion-grid>
+        </ion-toolbar>
+    </div>
+</ion-app>

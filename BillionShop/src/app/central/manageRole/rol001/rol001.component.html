@@ -1,0 +1,58 @@
+<ion-app>
+    <div class="ion-page font">
+        <app-header-with-menu (ionChange)="search($event)"></app-header-with-menu>
+        <app-menu-ham></app-menu-ham>
+        <ion-content class="background-content">
+            <ion-grid *ngIf="showListItem; else alertSearchNoResult">
+                <ion-row>
+                    <ion-col size="12">
+                        <ion-grid>
+                            <ion-row>
+                                <ion-col>
+                                    <button class="btn-del-all" (click)="AlertDeleteAll()">
+                                        <label class="bold">ลบทั้งหมด</label>
+                                    </button>
+                                </ion-col>
+                            </ion-row>
+                        </ion-grid>
+                        <ion-list>
+                            <ion-item-sliding *ngFor="let rol of srchRol">
+                                <ion-card id="card" class="center">
+                                    <ion-item>
+                                        <ion-grid>
+                                            <ion-row>
+                                                <ion-col class="bold">ชื่อ : {{rol.us_first_name}} {{rol.us_last_name}}</ion-col>
+                                            </ion-row>
+                                            <ion-row>
+                                                <ion-col class="bold">ตำแหน่ง : {{rol.us_permission}}</ion-col>
+                                            </ion-row>
+                                            <ion-row>
+                                                <ion-col class="bold">เบอร์โทรศัพท์ : {{rol.us_tel}}</ion-col>
+                                            </ion-row>
+                                            <ion-row>
+                                                <ion-col class="bold">อีเมล : {{rol.us_email}}</ion-col>
+                                            </ion-row>
+                                        </ion-grid>
+                                    </ion-item>
+                                    <ion-item-options side="end" (ionSwipe)="checkUserId(rol.us_id)">
+                                        <ion-item-option color="danger" (click)="checkUserId(rol.us_id)" expandable>ลบ</ion-item-option>
+                                    </ion-item-options>
+                                </ion-card>
+                            </ion-item-sliding>
+                        </ion-list>
+                    </ion-col>
+                </ion-row>
+            </ion-grid>
+            <ion-fab vertical="bottom" horizontal="end" slot="fixed">
+                <ion-fab-button (click)="Checker()" color="light" [routerLink]="['/rol/rol002']">
+                    <ion-icon name="person-add"></ion-icon>
+                </ion-fab-button>
+            </ion-fab>
+            <ng-template #alertSearchNoResult>
+                <ion-card-content class="alert-notfind">
+                    ไม่พบข้อมูลที่ค้นหา
+                </ion-card-content>
+            </ng-template>
+        </ion-content>
+    </div>
+</ion-app>

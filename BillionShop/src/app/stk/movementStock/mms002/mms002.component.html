@@ -1,0 +1,45 @@
+<ion-app>
+    <div class="ion-page">
+        <app-header-with-btn-back (ionChange)="search($event)"></app-header-with-btn-back>
+        <ion-content class="background-content">
+            <ion-grid *ngIf="showListItem; else alertNotFound">
+                <ion-row>
+                    <ion-col>
+                        <h4>{{date}}</h4>
+                        <hr/>
+                    </ion-col>
+                </ion-row>
+                <ion-row *ngFor="let mms of mmsData">
+                    <ion-col class="ion-no-padding">
+                        <ion-card (click)="goPageDetailMoveMent(mms.sm_itm_id)">
+                            <ion-card-content>
+                                <ion-grid class="font">
+                                    <ion-row>
+                                        <ion-col id="large-font">
+                                            <b>รหัสสินค้า {{mms.itm_code}}</b>
+                                        </ion-col>
+                                    </ion-row>
+                                    <ion-row>
+                                        <ion-col id="normal-font">
+                                            ชื่อสินค้า : {{mms.itm_name}} {{mms.itm_capacity}} {{mms.itm_unit}}
+                                        </ion-col>
+                                    </ion-row>
+                                    <ion-row>
+                                        <ion-col id="small-font">
+                                            <h3><b>จำนวนสินค้าคงเหลือ :  </b> {{mms.sm_balance}} {{mms.itm_sell_unit}}</h3>
+                                        </ion-col>
+                                    </ion-row>
+                                </ion-grid>
+                            </ion-card-content>
+                        </ion-card>
+                    </ion-col>
+                </ion-row>
+            </ion-grid>
+            <ng-template #alertNotFound>
+                <ion-card-content class="alert-notfind ">
+                    ไม่พบข้อมูลที่ค้นหา
+                </ion-card-content>
+            </ng-template>
+        </ion-content>
+    </div>
+</ion-app>

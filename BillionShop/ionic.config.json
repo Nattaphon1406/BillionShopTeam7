@@ -1,0 +1,8 @@
+{
+  "name": "BillionShop",
+  "integrations": {
+    "capacitor": {},
+    "cordova": {}
+  },
+  "type": "angular"
+}

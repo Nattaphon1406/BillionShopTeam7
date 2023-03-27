@@ -1,0 +1,87 @@
+.input-ordAmount {
+    flex-direction: row;
+    padding: 3px;
+    background: #E5E5E5;
+    border-radius: 10px;
+    border: 0px;
+    text-align: center;
+}
+
+.input-reason {
+    padding: 3px;
+    background: #fff;
+    border-radius: 10px;
+    border: 0px;
+    text-align: left;
+}
+
+.item-input {
+    ion-label {
+        color: black;
+        font-size: 17px;
+        font-weight: bold;
+    }
+    ion-label::after {
+        content: " *";
+        color: red;
+    }
+    ion-label.none-req::after {
+        content: "";
+        color: black;
+    }
+    .input-fill-secondary {
+        border-radius: 10px;
+        background-color: #fff;
+        width: 50%;
+        opacity: 300;
+        color: black;
+    }
+}
+
+.input-srchbar-fill {
+    padding: 0px 10px;
+    display: flex;
+    border-radius: 10px;
+    background: #a8a8a8;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.12);
+    .srchbar {
+        --background: #a8a8a8;
+        --box-shadow: 0 !important;
+        color: #666666;
+        --placeholder-opacity: 2;
+    }
+    .iconsize {
+        width: 20px;
+        height: 20px;
+    }
+    .scanBar {
+        color: black;
+    }
+}
+
+.font {
+    font-style: normal;
+    line-height: 20px;
+}
+
+.font #font-17.bold {
+    font-weight: bold;
+}
+
+.fab-btnsize {
+    width: 53px;
+    height: 53px;
+    .iconsize {
+        width: 40px;
+        height: 40px;
+    }
+}
+
+:host .ionicon {
+    stroke: currentcolor;
+    color: black;
+}
+
+#card-item {
+    border-radius: 10px;
+}

@@ -1,0 +1,33 @@
+[{
+    "itmCode": "TC000001",
+    "itmName": "โค้ก",
+    "capAmount": "1.25",
+    "capUnit": "ลิตร",
+    "itmAmount": "12",
+    "itmUnit": "ขวด",
+    "ordAmount": "5"
+}, {
+    "itmCode": "TC000002",
+    "itmName": "เลย์ รสมันฝรั่ง",
+    "capAmount": "55",
+    "capUnit": "กรัม",
+    "itmAmount": "12",
+    "itmUnit": "ชิ้น",
+    "ordAmount": "5"
+}, {
+    "itmCode": "TC000003",
+    "itmName": "น้ำเปล่า",
+    "capAmount": "1.5",
+    "capUnit": "ลิตร",
+    "itmAmount": "12",
+    "itmUnit": "ขวด",
+    "ordAmount": "5"
+}, {
+    "itmCode": "TC000004",
+    "itmName": "เลย์ รสเกลือ",
+    "capAmount": "55",
+    "capUnit": "กรัม",
+    "itmAmount": "12",
+    "itmUnit": "ชิ้น",
+    "ordAmount": "5"
+}]

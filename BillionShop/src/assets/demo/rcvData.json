@@ -1,0 +1,30 @@
+[
+    {
+        "ri_code": "RCV000001",
+        "ri_create_date": "19/07/2021",
+        "pco_code": "ORD000001",
+        "ri_create_by": "วชิรวิทย์ เปรมจิต",
+        "ri_status": "อยู่ระหว่างดำเนินการ"
+    },
+    {
+        "ri_code": "RCV000002",
+        "ri_create_date": "20/07/2021",
+        "pco_code": "ORD000002",
+        "ri_create_by": "วชิรวิทย์ เปรมจิต",
+        "ri_status": "ยืนยันใบรับสินค้า"
+    },
+    {
+        "ri_code": "RCV000003",
+        "ri_create_date": "21/07/2021",
+        "pco_code": "ORD000003",
+        "ri_create_by": "วชิรวิทย์ เปรมจิต",
+        "ri_status": "ยืนยันใบรับสินค้า"
+    },
+    {
+        "ri_code": "RCV000004",
+        "ri_create_date": "21/07/2021",
+        "pco_code": "ORD000004",
+        "ri_create_by": "วชิรวิทย์ เปรมจิต",
+        "ri_status": "อยู่ระหว่างดำเนินการ"
+    }
+]

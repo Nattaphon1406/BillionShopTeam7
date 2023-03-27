@@ -1,0 +1,21 @@
+<ion-header>
+    <ion-toolbar class="header">
+        <ion-buttons slot="start" button>
+            <ion-menu-button class="menu-hamburger"></ion-menu-button>
+        </ion-buttons>
+        <div style="color: #fff; font-size: 20px; font-weight: 600;">
+            <div *ngIf='!state'>
+                {{HeaderName}}
+            </div>
+            <div *ngIf='state'>
+                <ion-input placeholder="Search" (ionChange)='setSearch($event)'></ion-input>
+            </div>
+        </div>
+        <ion-buttons slot="secondary">
+            <ion-button (click)="clickSearch()">
+                <ion-icon class="toolbar-icon" slot="icon-only" name="search" *ngIf='!state'></ion-icon>
+                <ion-icon class="toolbar-icon" slot="icon-only" name="close-outline" *ngIf='state'></ion-icon>
+            </ion-button>
+        </ion-buttons>
+    </ion-toolbar>
+</ion-header>

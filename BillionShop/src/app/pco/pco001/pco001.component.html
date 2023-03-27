@@ -1,0 +1,60 @@
+<ion-app>
+    <div class="ion-page font">
+        <app-header-with-menu (ionChange)="search($event)"></app-header-with-menu>
+        <app-menu-ham></app-menu-ham>
+        <ion-content class="background-content">
+            <ion-grid *ngIf="showListPo; else alertNotFound">
+                <ion-row *ngFor="let po of srchPos">
+                    <ion-col>
+                        <ion-card id="card" (click)="showDetailPO(po.poId,po.poStatus)" [ngClass]="{
+                            'status-success':po.poStatus === 'สั่งซื้อสำเร็จ',
+                            'status-progress':po.poStatus === 'อยู่ระหว่างดำเนินการ',
+                            'status-confirm':po.poStatus === 'ยืนยันใบสั่งซื้อ',
+                            'status-cancel':po.poStatus === 'ยกเลิกใบสั่งซื้อ'
+                        }">
+                            <ion-card-content>
+                                <ion-grid>
+                                    <ion-row>
+                                        <ion-col class="bold" id="font-16">รหัสใบสั่งซื้อ</ion-col>
+                                        <ion-col class="bold" id="font-16">{{po.poCode}}</ion-col>
+                                    </ion-row>
+                                    <ion-row>
+                                        <ion-col id="font-16">วันที่เอกสาร</ion-col>
+                                        <ion-col id="font-16">{{po.poDate}}</ion-col>
+                                    </ion-row>
+                                    <ion-row>
+                                        <ion-col id="font-16">ชื่อผู้สร้างใบสั่งซื้อ</ion-col>
+                                        <ion-col id="font-16">{{po.poGenUser}}</ion-col>
+                                    </ion-row>
+                                    <ion-row>
+                                        <ion-col id="font-16">สถานะใบสั่งซื้อ</ion-col>
+                                        <ion-col id="font-16" [ngClass]="{
+                                            'font-success':po.poStatus === 'สั่งซื้อสำเร็จ',
+                                            'font-progress':po.poStatus === 'อยู่ระหว่างดำเนินการ',
+                                            'font-confirm':po.poStatus === 'ยืนยันใบสั่งซื้อ',
+                                            'font-cancel':po.poStatus === 'ยกเลิกใบสั่งซื้อ'
+                                        }">{{po.poStatus}}</ion-col>
+                                    </ion-row>
+                                </ion-grid>
+                            </ion-card-content>
+                        </ion-card>
+                    </ion-col>
+                </ion-row>
+            </ion-grid>
+            <ng-template #alertNotFound>
+                <ion-card-content *ngIf="alertSearchNotFound" class="alert-notfind">
+                    ไม่พบข้อมูลที่ค้นหา
+                </ion-card-content>
+            </ng-template>
+        </ion-content>
+        <ion-toolbar>
+            <ion-grid>
+                <ion-row>
+                    <ion-col size="10" offset="1">
+                        <button class="btn-add font" id="btn-createPO" (click)="modalCreatePO()">สร้างใบสั่งซื้อ</button>
+                    </ion-col>
+                </ion-row>
+            </ion-grid>
+        </ion-toolbar>
+    </div>
+</ion-app>

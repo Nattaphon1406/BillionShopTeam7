@@ -1,0 +1,23 @@
+[{
+    "itmCode": "TC000009",
+    "itmName": "เลย์ รสลาบ",
+    "capAmount": 75,
+    "capUnit": "กรัม",
+    "itmAmount": 1,
+    "itmOrdUnit": "แพ็ค"
+},
+{
+    "itmCode": "TC000008",
+    "itmName": "เลย์ รสสาหร่าย",
+    "capAmount": 75,
+    "capUnit": "กรัม",
+    "itmAmount": 1,
+    "itmOrdUnit": "แพ็ค"
+},{
+    "itmCode": "TC000011",
+    "itmName": "โค้ก",
+    "capAmount": 350,
+    "capUnit": "มิลลิลิตร",
+    "itmAmount": 2,
+    "itmOrdUnit": "แพ็ค"
+}]

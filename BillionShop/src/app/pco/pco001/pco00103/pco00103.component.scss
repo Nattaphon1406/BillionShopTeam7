@@ -1,0 +1,19 @@
+p {
+    font-style: normal;
+    font-size: 28px;
+    letter-spacing: 0.38px;
+    color: #000000;
+}
+
+img {
+    width: 75px;
+    height: 75px;
+}
+
+.center {
+    position: fixed;
+    text-align: center;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}

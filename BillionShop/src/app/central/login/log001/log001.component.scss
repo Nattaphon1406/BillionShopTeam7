@@ -1,0 +1,126 @@
+#Login {
+    #arrow {
+        position: absolute;
+        width: 50px;
+        height: 26px;
+        color: #5BB1FF;
+    }
+    .container {
+        position: absolute;
+        left: 0;
+        right: 0;
+        margin-top: 50px;
+    }
+    #text_login {
+        font-style: normal;
+        font-size: 36px;
+        line-height: 35px;
+        color: #369FFF;
+    }
+    .logo {
+        .logo-images {
+            position: relative;
+            height: 97px;
+            width: 97px;
+            border-radius: 15px;
+            background: #A6D4FF;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        .logo-text {
+            text-align: center;
+            font-style: normal;
+            font-size: 32px;
+            line-height: 35px;
+            color: #369FFF;
+            align-items: center;
+            margin-top: 10px;
+        }
+    }
+    .login {
+        height: 50vh;
+        .login-social {
+            font-size: 40px;
+            align-items: center;
+            .facebook {
+                width: 47px;
+                height: 47px;
+                color: #1298f6;
+            }
+            .google {
+                float: right;
+                align-items: center;
+                width: 47px;
+                height: 47px;
+                color: #f70000;
+            }
+        }
+        .text-detaction {
+            p {
+                width: 90%;
+                text-align: center;
+                border-bottom: 1px solid #000;
+                line-height: 0.1em;
+                margin: auto;
+                font-weight: 900;
+                font-size: 12px;
+            }
+            p span {
+                background: #fff;
+                padding: 0 10px;
+            }
+            padding-bottom: 20px;
+        }
+        .item-input {
+            ion-label {
+                text-align: left;
+                position: relative;
+                font-family: Roboto;
+                font-style: normal;
+                font-weight: normal;
+                font-size: 16px;
+                line-height: 13px;
+                margin-left: 14px;
+            }
+            ion-label::after {
+                content: " *";
+                color: red;
+            }
+            .input-fill-secondary {
+                flex-direction: row;
+                align-items: center;
+                padding: 7px 8px;
+                background: #dfefff;
+                border-radius: 10px;
+                border: 0px;
+                margin-top: 6px;
+                align-items: center;
+                color: #000;
+            }
+        }
+    }
+}
+
+#next {
+    background: #369FFF;
+    width: 100%;
+    height: 53px;
+    border-radius: 10px;
+    margin-top: 5%;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 22px;
+    line-height: 16px;
+    text-align: center;
+    text-transform: uppercase;
+    color: #ffffff;
+}
+
+.marginTop6 {
+    margin-top: 6%;
+}
+
+.marginTop3 {
+    margin-top: 3%;
+}

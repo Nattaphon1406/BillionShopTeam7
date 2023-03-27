@@ -1,0 +1,60 @@
+<ion-menu side="start" content-id="main-content" menuId="menuId">
+    <ion-header>
+        <ion-toolbar translucent class="header">
+            <ion-label>
+                <h2>ผู้ใช้งาน : {{userName}} </h2>
+                <p>E-Mail : {{emailUser}} </p>
+            </ion-label>
+        </ion-toolbar>
+    </ion-header>
+    <ion-content>
+        <ion-list lines="none" id="sidenav">
+            <ion-item button routerLink="/sell" routerDirection="root" routerLinkActive="active-item">
+                <ion-icon name="basket" slot="start"></ion-icon>
+                <ion-label>จำหน่ายสินค้า</ion-label>
+            </ion-item>
+            <ion-item button routerLink="/itm001" routerDirection="root" routerLinkActive="active-item">
+                <ion-icon name="bag-add" slot="start"></ion-icon>
+                <ion-label>การจัดการข้อมูลสินค้า</ion-label>
+            </ion-item>
+            <ion-item button (click)="menuItemHandler()">
+                <ion-icon name="document-text" slot="start"></ion-icon>
+                รายงานข้อมูลสินค้า
+            </ion-item>
+            <ion-item-group submenu [class.visible]="showSubmenu">
+                <ion-item submenu-item button routerLink="/sso001" routerDirection="root" routerLinkActive="active-item">รายงานยอดขาย</ion-item>
+                <ion-item submenu-item button routerLink="/pdr001" routerDirection="root" routerLinkActive="active-item">รายงานสต็อกสินค้า</ion-item>
+            </ion-item-group>
+            <ion-item button routerLink="/pco001" routerDirection="root" routerLinkActive="active-item">
+                <ion-icon name="create" slot="start"></ion-icon>
+                <ion-label>รายการใบสั่งซื้อ</ion-label>
+            </ion-item>
+            <ion-item button routerLink="/rcv001" routerDirection="root" routerLinkActive="active-item">
+                <ion-icon name="create" slot="start"></ion-icon>
+                <ion-label>รายการใบรับสินค้า</ion-label>
+            </ion-item>
+            <ion-item button routerLink="/noti001" routerDirection="root" routerLinkActive="active-item">
+                <ion-icon name="notifications" slot="start"></ion-icon>
+                <ion-label>แจ้งเตือนสินค้า</ion-label>
+            </ion-item>
+            <ion-item button (click)="menuSubStock()">
+                <ion-icon name="cube" slot="start"></ion-icon>
+                <ion-label>สต็อกสินค้า</ion-label>
+            </ion-item>
+            <ion-item-group submenu [class.visible]="showSubmenustock">
+                <ion-item submenu-item button routerLink="/ajs001" routerDirection="root" routerLinkActive="active-item">ปรับสต็อกสินค้า</ion-item>
+                <ion-item submenu-item button routerLink="/mms001" routerDirection="root" routerLinkActive="active-item">การเคลื่อนไหวของสต็อกสินค้า</ion-item>
+            </ion-item-group>
+            <ion-item button routerLink="/rol" routerDirection="root" routerLinkActive="active-item">
+                <ion-icon name="person" slot="start"></ion-icon>
+                <ion-label>จัดการผู้ใช้งาน</ion-label>
+            </ion-item>
+            <ion-item button (click)="presentAlert()">
+                <ion-icon name="log-out" slot="start"></ion-icon>
+                <ion-label>ล็อกเอาท์</ion-label>
+            </ion-item>
+        </ion-list>
+    </ion-content>
+</ion-menu>
+
+<ion-router-outlet id="main-content"></ion-router-outlet>

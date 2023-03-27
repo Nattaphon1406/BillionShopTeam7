@@ -1,0 +1,133 @@
+<ion-app>
+    <div class="ion-page">
+        <ion-content>
+            <div id="margin-top"></div>
+            <ion-grid>
+                <ion-row>
+                    <ion-icon id="arrow" name="arrow-back-outline" [routerLink]="['']"></ion-icon>
+                </ion-row>
+                <ion-row>
+                    <img id="logo" src="./assets/icon/Logo_App.png">
+                </ion-row>
+                <ion-row style="margin-top: 10px; margin-bottom: 10px;">
+                    <ion-col>
+                        <center>
+                            <ion-label id="regi">ลงทะเบียน</ion-label><br>
+                            <ion-label id="regi">ผู้ประกอบการ</ion-label>
+                        </center>
+                    </ion-col>
+                </ion-row>
+            </ion-grid>
+            <ion-grid>
+                <ion-row>
+                    <ion-col size="0.8"></ion-col>
+                    <ion-col class="item-input">
+                        <ion-label>ชื่อ</ion-label>
+                        <div class="input-fill-secondary">
+                            <ion-input type="text" class="input" #fname required></ion-input>
+                        </div>
+                    </ion-col>
+                    <ion-col size="0.8"></ion-col>
+                </ion-row>
+                <ion-row>
+                    <ion-col size="0.8"></ion-col>
+                    <ion-col class="item-input">
+                        <ion-label>นามสกุล</ion-label>
+                        <div class="input-fill-secondary">
+                            <ion-input type="text" class="input" #lname required></ion-input>
+                        </div>
+                    </ion-col>
+                    <ion-col size="0.8"></ion-col>
+                </ion-row>
+                <ion-row>
+                    <ion-col size="0.8"></ion-col>
+                    <ion-col class="item-input">
+                        <ion-label>อีเมล</ion-label>
+                        <div class="input-fill-secondary">
+                            <ion-input type="email" class="input" #email required></ion-input>
+                        </div>
+                    </ion-col>
+                    <ion-col size="0.8"></ion-col>
+                </ion-row>
+                <ion-row>
+                    <ion-col size="0.8"></ion-col>
+                    <ion-col class="item-input">
+                        <ion-label>เบอร์โทรศัพท์</ion-label>
+                        <div class="input-fill-secondary">
+                            <ion-input type="text" class="input" #tel required></ion-input>
+                        </div>
+                    </ion-col>
+                    <ion-col size="0.8"></ion-col>
+                </ion-row>
+                <ion-row>
+                    <ion-col size="0.8"></ion-col>
+                    <ion-col class="item-input">
+                        <ion-label>ตำแหน่ง</ion-label>
+                        <div class="input-fill-secondary">
+                            <ion-select interface="popover" value="own" disabled #position>
+                                <ion-select-option value="own" selected>ผู้ประกอบการ</ion-select-option>
+                                <ion-select-option value="emp">พนักงาน</ion-select-option>
+                            </ion-select>
+                        </div>
+                    </ion-col>
+                    <ion-col size="0.8"></ion-col>
+                </ion-row>
+                <ion-row>
+                    <ion-col size="0.8"></ion-col>
+                    <ion-col class="item-input">
+                        <ion-label>ชื่อผู้ใช้งาน</ion-label>
+                        <div class="input-fill-secondary">
+                            <ion-input type="text" class="input" #username required></ion-input>
+                        </div>
+                    </ion-col>
+                    <ion-col size="0.8"></ion-col>
+                </ion-row>
+                <ion-row>
+                    <ion-col size="0.8"></ion-col>
+                    <ion-col class="item-input">
+                        <ion-label>รหัสผ่าน</ion-label>
+                        <div class="input-fill-secondary">
+                            <ion-input type="password" class="input" #password required></ion-input>
+                        </div>
+                    </ion-col>
+                    <ion-col size="0.8"></ion-col>
+                </ion-row>
+                <ion-row>
+                    <ion-col size="0.8"></ion-col>
+                    <ion-col class="item-input">
+                        <ion-label>ยืนยันรหัสผ่าน</ion-label>
+                        <div class="input-fill-secondary">
+                            <ion-input type="password" class="input" #passwordConfirm required></ion-input>
+                        </div>
+                    </ion-col>
+                    <ion-col size="0.8"></ion-col>
+                </ion-row>
+                <ion-row>
+                    <ion-col size="0.8"></ion-col>
+                    <ion-col class="item-input">
+                        <ion-label>ชื่อร้านค้า</ion-label>
+                        <div class="input-fill-secondary">
+                            <ion-input #nameShop required></ion-input>
+                        </div>
+                    </ion-col>
+                    <ion-col size="0.8"></ion-col>
+                </ion-row>
+            </ion-grid>
+            <div class="margin-top-12"></div>
+        </ion-content>
+        <ion-toolbar>
+            <ion-grid>
+                <ion-row>
+                    <ion-col size="0.8"></ion-col>
+                    <ion-col>
+                        <button type="submit" id="next"
+                            (click)="goSucceed(fname.value, lname.value, email.value, tel.value, position.value, username.value, password.value, passwordConfirm.value, nameShop.value)">
+                            ลงทะเบียนผู้ประกอบการ
+                        </button>
+                    </ion-col>
+                    <ion-col size="0.8"></ion-col>
+                </ion-row>
+            </ion-grid>
+        </ion-toolbar>
+    </div>
+</ion-app>

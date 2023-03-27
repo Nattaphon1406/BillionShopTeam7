@@ -1,0 +1,93 @@
+<ion-app>
+    <div class="ion-page">
+        <app-header-with-menu (ionChange)="search($event)"></app-header-with-menu>
+        <app-menu-ham></app-menu-ham>
+        <ion-content class="background-content">
+            <div>
+                <ion-grid *ngIf="showListItem; else testEmp">
+                    <ion-row>
+                        <ion-col size="6" *ngFor="let itm of srchItem">
+                            <ion-card class="card" button (click)="addItemInBucket(itm.id)">
+                                <ion-card-header>
+
+                                    <ion-img [src]="itm.img" class="set-img"></ion-img>
+
+                                </ion-card-header>
+                                <ion-card-content>
+                                    <ion-grid>
+                                        <ion-row>
+                                            <ion-col>
+                                                รหัสสินค้า :
+                                            </ion-col>
+                                        </ion-row>
+                                        <ion-row>
+                                            <ion-col>
+                                                {{itm.itemcode}}
+                                            </ion-col>
+                                        </ion-row>
+                                        <ion-row *ngIf="itm.barcode != null">
+                                            <ion-col>
+                                                รหัสบาร์โค้ด :
+                                            </ion-col>
+                                        </ion-row>
+                                        <ion-row *ngIf="itm.barcode != null">
+                                            <ion-col>
+                                                {{itm.barcode}}
+                                            </ion-col>
+                                        </ion-row>
+                                        <ion-row>
+                                            <ion-col class="textoverflow">
+                                                {{itm.itemname}}
+                                            </ion-col>
+                                        </ion-row>
+                                        <ion-row>
+                                            <ion-col size="6" class="edit-font">
+                                                {{itm.itemcapacity}} {{itm.itemunit}}
+                                            </ion-col>
+                                            <ion-col size="6" class="ion-text-end price-text">
+                                                {{itm.itemprice.toFixed(2)}} บาท
+                                            </ion-col>
+                                        </ion-row>
+                                    </ion-grid>
+                                </ion-card-content>
+                            </ion-card>
+                        </ion-col>
+                    </ion-row>
+                </ion-grid>
+                <ng-template #testEmp>
+                    <ion-card-content *ngIf="alertItem == false" class="alert-notfind">
+                        ไม่พบข้อมูลที่ค้นหา
+                    </ion-card-content>
+                    <ion-card-content *ngIf="alertItem == true">
+                        <ion-icon class="Icon-non" name="medkit-outline"></ion-icon>
+                        <div class="nofind-item">ไม่พบข้อมูลสินค้า</div>
+                        <button expand="full " id="One-btn-toolbar" class="btn-add " routerLink="/itm002" routerDirection="root">เพิ่มสินค้า</button>
+                    </ion-card-content>
+                </ng-template>
+            </div>
+        </ion-content>
+
+
+        <ion-tab-bar slot="bottom">
+            <ion-tab-button tab="tab1" routerLink="/sso001">
+                <ion-icon class="Icon" name="reader"></ion-icon>
+            </ion-tab-button>
+
+            <ion-tab-button tab="tab2" (click)="goPageScan()">
+                <ion-icon class="Icon" name="barcode-sharp"></ion-icon>
+            </ion-tab-button>
+
+            <ion-tab-button tab="tab3" routerLink="/noti001">
+                <ion-icon class="Icon" name="notifications"></ion-icon>
+                <!-- <ion-label>Notifications</ion-label> -->
+            </ion-tab-button>
+
+            <ion-tab-button tab="tab4" (click)="goPageBucket()">
+                <ion-badge color="danger" *ngIf="alertNumberOfItem > 0" class="edit-badge"> {{alertNumberOfItem}}</ion-badge>
+                <ion-icon class="Icon" name="cart"></ion-icon>
+                <!-- <ion-label>Cart</ion-label> -->
+            </ion-tab-button>
+        </ion-tab-bar>
+
+    </div>
+</ion-app>

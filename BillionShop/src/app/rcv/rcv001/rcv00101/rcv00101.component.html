@@ -1,0 +1,70 @@
+<ion-app>
+    <div class="ion-page">
+        <app-header-with-back-no-search [headerText]="riCode"></app-header-with-back-no-search>
+        <ion-content class="background-content">
+            <ion-grid>
+                <ion-row>
+                    <ion-col size="12">
+                        <ion-card id="card" [ngClass]="{'bg-progress':riStatus === 'อยู่ระหว่างดำเนินการ', 'bg-confirm':riStatus === 'ยืนยันใบรับสินค้า'}">
+                            <ion-card-content>
+                                <ion-grid class="info_PO">
+                                    <div id="font-17">
+                                        <ion-row id="info_Bold">
+                                            <ion-col>รหัสใบรับสินค้า</ion-col>
+                                            <ion-col>{{riCode}}</ion-col>
+                                        </ion-row>
+                                        <ion-row>
+                                            <ion-col id="info_Bold">วันที่เอกสาร</ion-col>
+                                            <ion-col>{{riDate}}</ion-col>
+                                        </ion-row>
+                                        <ion-row>
+                                            <ion-col id="info_Bold">รหัสใบสั่งซื้อ</ion-col>
+                                            <ion-col>{{poCode}}</ion-col>
+                                        </ion-row>
+                                        <ion-row>
+                                            <ion-col id="info_Bold">ชื่อผู้สร้าง</ion-col>
+                                            <ion-col size="6">{{riGenUser}}</ion-col>
+                                        </ion-row>
+                                        <ion-row>
+                                            <ion-col id="info_Bold">สถานะใบรับสินค้า</ion-col>
+                                            <ion-col id="font-17" [ngClass]="{
+                                                'font-progress':riStatus === 'อยู่ระหว่างดำเนินการ',
+                                                'font-confirm':riStatus === 'ยืนยันใบรับสินค้า'
+                                            }">{{riStatus}}</ion-col>
+                                        </ion-row>
+                                    </div>
+                                </ion-grid>
+                            </ion-card-content>
+
+                            <ion-card id="card-item" *ngFor="let rid of srchItms">
+                                <ion-card-content>
+                                    <ion-grid class="info_PO">
+                                        <div id="font-16">
+                                            <ion-row class="center">
+                                                <ion-col size="6" id="info_Bold">รหัสสินค้า:</ion-col>
+                                                <ion-col size="5">{{rid.itm_code}}</ion-col>
+                                            </ion-row>
+                                            <ion-row>
+                                                <ion-col id="info_Bold">ชื่อสินค้า:</ion-col>
+                                                <ion-col id="font-16">{{rid.itm_name}} {{rid.itm_capacity}} {{rid.itm_unit}}
+                                                </ion-col>
+                                            </ion-row>
+                                            <ion-row>
+                                                <ion-col size="6" id="info_Bold">จำนวนที่รับมา:</ion-col>
+                                                <ion-col>{{rid.rid_receive_quantity}} {{rid.rid_order_unit}}</ion-col>
+                                            </ion-row>
+                                            <ion-row id="info_Center">
+                                                <ion-col size="6" id="info_Bold">ราคาที่ซื้อสินค้า:</ion-col>
+                                                <ion-col>{{rid.rid_purchase_price}} บาท</ion-col>
+                                            </ion-row>
+                                        </div>
+                                    </ion-grid>
+                                </ion-card-content>
+                            </ion-card>
+                        </ion-card>
+                    </ion-col>
+                </ion-row>
+            </ion-grid>
+        </ion-content>
+    </div>
+</ion-app>

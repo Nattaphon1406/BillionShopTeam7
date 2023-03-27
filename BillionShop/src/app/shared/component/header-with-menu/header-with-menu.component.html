@@ -1,0 +1,15 @@
+<ion-header>
+    <ion-toolbar class="header">
+        <ion-buttons slot="start" button>
+            <ion-menu-button class="menu-hamburger" auto-hide="false"></ion-menu-button>
+        </ion-buttons>
+        <app-search-bar></app-search-bar>
+        <ion-buttons slot="secondary">
+            <app-icon-scanbarcode *ngIf="searchButton"></app-icon-scanbarcode>
+            <ion-button>
+                <ion-icon class="toolbar-icon" slot="icon-only" name="search"></ion-icon>
+            </ion-button>
+        </ion-buttons>
+    </ion-toolbar>
+    <app-header-with-user></app-header-with-user>
+</ion-header>

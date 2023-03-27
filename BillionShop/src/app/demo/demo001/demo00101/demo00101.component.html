@@ -1,0 +1,47 @@
+<ion-app>
+  <div class="ion-page">
+    <ion-header>
+      <ion-toolbar class="header">
+        <ion-buttons slot="start">
+          <ion-menu-button class="menu-hamburger"></ion-menu-button>
+        </ion-buttons>
+        <ion-title>Demo Datail</ion-title>
+        <!-- <ion-grid>
+          <ion-row>
+            <ion-col size="2">
+              <div>
+                <ion-buttons slot="start">
+                  <ion-back-button defaultHref="demo002"></ion-back-button>
+                </ion-buttons>
+              </div>
+            </ion-col>
+            <ion-col size="10">
+              <div style="width: 100%; height: 30px; margin-top: 3px;color: #ffffff">
+                หน้าเดโม่ (รายละเอียด)
+              </div>
+            </ion-col>
+          </ion-row>
+        </ion-grid> -->
+      </ion-toolbar>
+    </ion-header>
+    <ion-content>
+      <!-- Add Content -->
+    </ion-content>
+    <ion-toolbar>
+      <ion-grid>
+        <ion-row>
+          <ion-col size="5" offset="1">
+            <div>
+              <button class="btn-conf" (click)="btnConf()">ยืนยัน</button>
+            </div>
+          </ion-col>
+          <ion-col size="5">
+            <div>
+              <button class="btn-canc" (click)="btnCanc()">ยกเลิก</button>
+            </div>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+    </ion-toolbar>
+  </div>
+</ion-app>

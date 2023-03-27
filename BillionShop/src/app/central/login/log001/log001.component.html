@@ -1,0 +1,69 @@
+<ion-app>
+    <div class="ion-page">
+        <ion-content id="Login">
+
+            <div class="container">
+                <ion-row>
+                    <ion-icon id="arrow" name="arrow-back-outline" [routerLink]="['']"></ion-icon>
+                </ion-row>
+                <ion-grid class="margin-top6">
+                    <div class="logo">
+                        <ion-row>
+                            <div class="logo-images">
+                                <img src="./assets/icon/Logo_App.png" alt="logo">
+                            </div>
+                        </ion-row>
+
+                        <ion-row class="logo-text">
+                            <ion-col>
+                                <center>
+                                    <ion-label>เข้าสู่ระบบ</ion-label>
+                                </center>
+                            </ion-col>
+                        </ion-row>
+                    </div>
+
+                    <ion-row>
+                        <ion-col>
+                            <div class="login">
+                                <ion-grid>
+                                    <ion-row class="margin-top3">
+                                        <ion-col size="0.4"></ion-col>
+                                        <ion-col class="item-input">
+                                            <ion-label>ชื่อผู้ใช้งาน</ion-label>
+                                            <div class="input-fill-secondary">
+                                                <ion-input type="text" class="input" #user required></ion-input>
+                                            </div>
+                                        </ion-col>
+                                        <ion-col size="0.4"></ion-col>
+                                    </ion-row>
+
+                                    <ion-row>
+                                        <ion-col size="0.4"></ion-col>
+                                        <ion-col class="item-input">
+                                            <ion-label>รหัสผ่าน</ion-label>
+                                            <div class="input-fill-secondary">
+                                                <ion-input type="password" class="input" #pass required></ion-input>
+                                            </div>
+                                        </ion-col>
+                                        <ion-col size="0.4"></ion-col>
+                                    </ion-row>
+                                    <ion-row class="margin-top3">
+                                        <ion-col size="0.4"></ion-col>
+                                        <ion-col>
+                                            <button type="submit" id="next" (click)="gologin(user.value,pass.value)">
+                                                เข้าสู่ระบบ
+                                            </button>
+                                        </ion-col>
+                                        <ion-col size="0.4"></ion-col>
+                                    </ion-row>
+                                </ion-grid>
+                            </div>
+                        </ion-col>
+                    </ion-row>
+                </ion-grid>
+            </div>
+
+        </ion-content>
+    </div>
+</ion-app>

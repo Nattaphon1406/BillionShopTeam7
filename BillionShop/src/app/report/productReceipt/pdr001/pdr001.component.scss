@@ -1,0 +1,108 @@
+#card {
+    background: white;
+    border-radius: 10px;
+    align-items: center;
+    color: #2C2C2C;
+}
+
+.right {
+    text-align: right;
+}
+
+.font {
+    font-style: normal;
+    line-height: 20px;
+}
+
+.font #font-12 {
+    font-size: 12px;
+}
+
+.font #font-14 {
+    font-size: 14px;
+}
+
+.font #font-16 {
+    font-size: 16px;
+}
+
+.font #font-17 {
+    font-size: 17px;
+}
+
+.font #font-18 {
+    font-size: 18px;
+}
+
+.font #font-20 {
+    font-size: 20px;
+}
+
+.font #font-12.bold {
+    font-weight: bold;
+}
+
+.font #font-14.bold {
+    font-weight: bold;
+}
+
+.font #font-16.bold {
+    font-weight: bold;
+}
+
+.font #font-17.bold {
+    font-weight: bold;
+}
+
+.font #font-18.bold {
+    font-weight: bold;
+}
+
+.font #font-20.bold {
+    font-weight: bold;
+}
+
+.center {
+    align-items: center;
+}
+
+.font #font-17.status {
+    color: #D67300;
+}
+
+.font #font-18.confirm {
+    font-weight: bold;
+    height: 42px;
+    color: #FFFFFF;
+}
+
+.font #font-18.cancel {
+    font-weight: bold;
+    //width: 181px;
+    height: 42px;
+    color: #FFFFFF;
+}
+
+#card-item {
+    border-radius: 10px;
+    align-items: center;
+    color: #777575;
+}
+
+.input-srchbar-fill {
+    padding: 0px 10px;
+    display: flex;
+    border-radius: 10px;
+    background: #a8a8a8;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.12);
+    .srchbar {
+        --background: #a8a8a8;
+        --box-shadow: 0 !important;
+        color: #666666;
+        --placeholder-opacity: 2;
+    }
+    .iconsize {
+        width: 20px;
+        height: 20px;
+    }
+}

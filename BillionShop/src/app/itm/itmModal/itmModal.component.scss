@@ -1,0 +1,66 @@
+    .item-input {
+        ion-label {
+            margin-left: 10px;
+            font-size: 14px;
+        }
+        ion-label::after {
+            content: " *";
+            color: red;
+        }
+        .input-fill-secondary {
+            border-radius: 10px;
+            background-color: #dfdfdf;
+            padding: 5px 7.5px;
+            margin: 0px 10px;
+            display: flex;
+            ion-icon {
+                margin: auto;
+                width: 30px;
+                height: 30px;
+            }
+            color: black;
+        }
+    }
+    
+    .title {
+        font-size: 16px;
+        font-weight: 500;
+        font-style: normal;
+        color: #000000;
+        text-transform: uppercase;
+        margin-left: 10px;
+        span {
+            font-weight: 700;
+            color: #000;
+        }
+    }
+    
+    .btn {
+        width: 136px;
+        height: 35px;
+        border-radius: 10px;
+        font-size: 14px;
+        font-style: normal;
+        font-weight: bold;
+        margin-left: 10px;
+        background: #369FFF;
+        color: #fff;
+    }
+    
+    .btnDel {
+        width: 136px;
+        height: 35px;
+        border-radius: 10px;
+        font-size: 14px;
+        font-style: normal;
+        font-weight: bold;
+        margin-left: 10px;
+        background: red;
+        color: #fff;
+    }
+    
+    .btn-conf.font {
+        font-size: 18px;
+        font-style: normal;
+        font-weight: bold;
+    }

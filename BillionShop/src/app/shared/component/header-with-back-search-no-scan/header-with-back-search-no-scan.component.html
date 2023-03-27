@@ -1,0 +1,13 @@
+<ion-header>
+    <ion-toolbar class="header">
+        <ion-back-button slot="start" id="arrow-back-btn" button (click)="goBackPagebtn()" defaultHref={{backPath}} icon="arrow-back-outline">
+        </ion-back-button>
+        <app-search-bar></app-search-bar>
+        <ion-buttons slot="secondary">
+            <ion-button>
+                <ion-icon class="toolbar-icon" slot="icon-only" name="search"></ion-icon>
+            </ion-button>
+        </ion-buttons>
+    </ion-toolbar>
+    <app-header-with-user></app-header-with-user>
+</ion-header>

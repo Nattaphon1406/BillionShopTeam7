@@ -1,0 +1,73 @@
+<ion-app>
+    <div class="ion-page font">
+        <app-header-with-back-no-search [headerText]="poCode"></app-header-with-back-no-search>
+        <ion-content class="background-content">
+            <ion-grid>
+                <ion-row>
+                    <ion-col>
+                        <ion-card id="card" [ngClass]="{
+                            'bg-success':poStatus === 'สั่งซื้อสำเร็จ',
+                            'bg-progress':poStatus === 'อยู่ระหว่างดำเนินการ',
+                            'bg-confirm':poStatus === 'ยืนยันใบสั่งซื้อ',
+                            'bg-cancel':poStatus === 'ยกเลิกใบสั่งซื้อ'
+                        }">
+                            <ion-card-content>
+                                <ion-grid>
+                                    <ion-row>
+                                        <ion-col class="bold" id="font-17">รหัสใบสั่งซื้อ</ion-col>
+                                        <ion-col class="bold" id="font-17">{{poCode}}</ion-col>
+                                    </ion-row>
+                                    <ion-row>
+                                        <ion-col class="bold" id="font-17">วันที่เอกสาร</ion-col>
+                                        <ion-col id="font-17">{{poDate}}</ion-col>
+                                    </ion-row>
+                                    <ion-row>
+                                        <ion-col class="bold" id="font-17">ชื่อผู้สร้างใบสั่งซื้อ</ion-col>
+                                        <ion-col id="font-17">{{poGenUser}}</ion-col>
+                                    </ion-row>
+                                    <ion-row>
+                                        <ion-col class="bold" id="font-17">สถานะใบสั่งซื้อ</ion-col>
+                                        <ion-col id="font-17" [ngClass]="{
+                                            'font-success':poStatus === 'สั่งซื้อสำเร็จ',
+                                            'font-progress':poStatus === 'อยู่ระหว่างดำเนินการ',
+                                            'font-confirm':poStatus === 'ยืนยันใบสั่งซื้อ',
+                                            'font-cancel':poStatus === 'ยกเลิกใบสั่งซื้อ'
+                                        }">{{poStatus}}</ion-col>
+                                    </ion-row>
+                                </ion-grid>
+                                <ion-grid>
+                                    <ion-row class="center">
+                                        <ion-col class="bold" id="font-17">รายการสินค้า</ion-col>
+                                    </ion-row>
+                                </ion-grid>
+                            </ion-card-content>
+                            <ion-card *ngFor="let itm of srchItms" id="card-item">
+                                <ion-card-content>
+                                    <ion-grid>
+                                        <ion-row class="center">
+                                            <ion-col size="6" class="bold" id="font-17">รหัสสินค้า:</ion-col>
+                                            <ion-col size="5" id="font-16">{{itm.itm_code}}</ion-col>
+                                        </ion-row>
+                                        <ion-row>
+                                            <ion-col class="bold" id="font-17">ชื่อสินค้า:</ion-col>
+                                            <ion-col id="font-16" size="6">{{itm.itm_name}} {{itm.itm_capacity}} {{itm.itm_unit}}</ion-col>
+                                        </ion-row>
+                                        <ion-row>
+                                            <ion-col class="bold" id="font-17" size="6">จำนวนสินค้า/{{itm.itm_order_unit}}:</ion-col>
+                                            <ion-col id="font-16">{{itm.itm_quantity_per_unit}} {{itm.itm_sell_unit}}
+                                            </ion-col>
+                                        </ion-row>
+                                        <ion-row class="center">
+                                            <ion-col class="bold center" id="font-17" size="6">จำนวนที่สั่งซื้อ:</ion-col>
+                                            <ion-col id="font-16">{{itm.itm_order_quantity}} {{itm.itm_order_unit}}</ion-col>
+                                        </ion-row>
+                                    </ion-grid>
+                                </ion-card-content>
+                            </ion-card>
+                        </ion-card>
+                    </ion-col>
+                </ion-row>
+            </ion-grid>
+        </ion-content>
+    </div>
+</ion-app>

@@ -1,0 +1,176 @@
+<ion-app>
+    <div class="ion-page font">
+        <app-header-with-menu (ionFocus)="search($event)" (ionChange)="search($event)"></app-header-with-menu>
+        <app-menu-ham></app-menu-ham>
+        <ion-content class="" id="">
+            <ion-grid>
+                <ion-row>
+                    <ion-col>
+                        <ion-card id="card">
+                            <ion-card-content style="padding-top: 25px; padding-bottom: 25px">
+                                <ion-grid>
+                                    <ion-row>
+                                        <ion-col>
+                                            <div class="re-header" style="
+                          text-align: center;
+                          font-size: 16px;
+                          font-weight: 600;
+                          line-height: 30px;
+                          color: #000 !important;
+                        ">
+                                                ร้านคุณสมใจ
+                                            </div>
+                                        </ion-col>
+                                    </ion-row>
+                                    <ion-row>
+                                        <ion-col>
+                                            <div style="
+                          font-size: 16px;
+                          font-weight: 500;
+                          line-height: 20px;
+                          color: #000 !important;
+                        ">
+                                                เลขที่ใบเสร็จ : 1
+                                            </div>
+                                            <div style="
+                          font-size: 16px;
+                          font-weight: 500;
+                          line-height: 20px;
+                          color: #000 !important;
+                          margin-left: 15px;
+                        ">
+                                                วันที่ : 29/07/2021 13:36
+                                            </div>
+                                        </ion-col>
+                                    </ion-row>
+                                    <ion-row>
+                                        <ion-col style="
+                        border-top: 3px dotted;
+                        border-bottom: 3px dotted;
+                        margin: 15px 0;
+                        padding-top: 15px;
+                        padding-bottom: 15px;
+                      ">
+                                            <ion-row>
+                                                <ion-col style="margin: 0px; padding: 0px">
+                                                    <div style="
+                              font-size: 16px;
+                              font-weight: 500;
+                              line-height: 20px;
+                              color: #000 !important;
+                            ">
+                                                        ปลากระป๋อง 155 ก.
+                                                    </div>
+                                                </ion-col>
+                                                <ion-col style="margin: 0px; padding: 0px">
+                                                    <div style="
+                              font-size: 16px;
+                              font-weight: 500;
+                              line-height: 20px;
+                              color: #000 !important;
+                              text-align: end;
+                            ">
+                                                        1
+                                                    </div>
+                                                    <div style="
+                              font-size: 16px;
+                              font-weight: 500;
+                              line-height: 20px;
+                              color: #000 !important;
+                              text-align: end;
+                            ">
+                                                        18.00
+                                                    </div>
+                                                </ion-col>
+                                            </ion-row>
+                                        </ion-col>
+                                    </ion-row>
+                                    <ion-row>
+                                        <ion-col>
+                                            <div style="
+                          font-size: 16px;
+                          font-weight: 500;
+                          line-height: 20px;
+                          color: #000 !important;
+                        ">
+                                                รวมทั้งสิน
+                                            </div>
+                                        </ion-col>
+                                        <ion-col>
+                                            <div style="
+                          font-size: 16px;
+                          font-weight: 500;
+                          line-height: 20px;
+                          color: #000 !important;
+                          text-align: end;
+                        ">
+                                                18.00 บาท
+                                            </div>
+                                        </ion-col>
+                                    </ion-row>
+                                    <ion-row>
+                                        <ion-col>
+                                            <div style="
+                          font-size: 16px;
+                          font-weight: 500;
+                          line-height: 20px;
+                          color: #000 !important;
+                        ">
+                                                รับมา
+                                            </div>
+                                        </ion-col>
+                                        <ion-col>
+                                            <div style="
+                          font-size: 16px;
+                          font-weight: 500;
+                          line-height: 20px;
+                          color: #000 !important;
+                          text-align: end;
+                        ">
+                                                18.00 บาท
+                                            </div>
+                                        </ion-col>
+                                    </ion-row>
+                                    <ion-row>
+                                        <ion-col>
+                                            <div style="
+                          font-size: 16px;
+                          font-weight: 500;
+                          line-height: 20px;
+                          color: #000 !important;
+                        ">
+                                                เงินทอน
+                                            </div>
+                                        </ion-col>
+                                        <ion-col>
+                                            <div style="
+                          font-size: 16px;
+                          font-weight: 500;
+                          line-height: 20px;
+                          color: #000 !important;
+                          text-align: end;
+                        ">
+                                                0.00 บาท
+                                            </div>
+                                        </ion-col>
+                                    </ion-row>
+                                </ion-grid>
+                            </ion-card-content>
+                        </ion-card>
+                    </ion-col>
+                </ion-row>
+            </ion-grid>
+        </ion-content>
+        <ion-toolbar>
+            <ion-grid>
+                <ion-row>
+                    <ion-col size="10 " offset="1 ">
+                        <button class="btn-add font" id="btn-createPO" style="font-size: 20px">
+              กลับสู่หน้าจำหน่ายสินค้า
+            </button>
+                    </ion-col>
+                </ion-row>
+            </ion-grid>
+        </ion-toolbar>
+    </div>
+</ion-app>

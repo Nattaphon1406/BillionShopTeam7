@@ -1,0 +1,226 @@
+[
+    {
+        "pageId": "demo001",
+        "prmHdrNo": 1,
+        "prmDtlCd": "001",
+        "lang": "TH",
+        "desc": "หน้าเดโม่"
+    },
+    {
+        "pageId": "demo001",
+        "prmHdrNo": 1,
+        "prmDtlCd": "001",
+        "lang": "EN",
+        "desc": "Demo Page"
+    },
+    {
+        "pageId": "demo002",
+        "prmHdrNo": 1,
+        "prmDtlCd": "002",
+        "lang": "EN",
+        "descTH": "รายละเอียด"
+    },
+    {
+        "pageId": "demo002",
+        "prmHdrNo": 1,
+        "prmDtlCd": "002",
+        "lang": "EN",
+        "desc": "Detail"
+    },
+    {
+        "pageId": "itm001",
+        "prmHdrNo": 1,
+        "prmDtlCd": "itm001",
+        "lang": "TH",
+        "desc": "การจัดการข้อมูลสินค้า"
+    },
+    {
+        "pageId": "itm002",
+        "prmHdrNo": 1,
+        "prmDtlCd": "itm002",
+        "lang": "TH",
+        "desc": "เพิ่มข้อมูลสินค้า"
+    },
+    {
+        "pageId": "pco001",
+        "prmHdrNo": 1,
+        "prmDtlCd": "pco001",
+        "lang": "TH",
+        "desc": "รายการใบสั่งซื้อ"
+    },
+    {
+        "pageId": "pco00101",
+        "prmHdrNo": 1,
+        "prmDtlCd": "pco00101",
+        "lang": "TH",
+        "desc": " "
+    },
+    {
+        "pageId": "pco00102",
+        "prmHdrNo": 1,
+        "prmDtlCd": "pco00102",
+        "lang": "TH",
+        "desc": "สร้างใบสั่งซื้อ"
+    },
+    {
+        "pageId": "pco00103",
+        "prmHdrNo": 1,
+        "prmDtlCd": "pco00103",
+        "lang": "TH",
+        "desc": "สร้างใบสั่งซื้ออัตโนมัติ"
+    },
+    {
+        "pageId": "noti001",
+        "prmHdrNo": 1,
+        "prmDtlCd": "noti001",
+        "lang": "TH",
+        "desc": "แจ้งเตือนสินค้า"
+    },
+    {
+        "pageId": "noti002",
+        "prmHdrNo": 1,
+        "prmDtlCd": "noti002",
+        "lang": "TH",
+        "desc": "รายละเอียดการแจ้งเตือนสินค้า"
+    },
+    {
+        "pageId": "sell001",
+        "prmHdrNo": 1,
+        "prmDtlCd": "sell001",
+        "lang": "TH",
+        "desc": "จำหน่ายสินค้า"
+    },
+    {
+        "pageId": "sell004",
+        "prmHdrNo": 1,
+        "prmDtlCd": "sell004",
+        "lang": "TH",
+        "desc": "ชำระเงิน"
+    },
+    {
+        "pageId": "sell003",
+        "prmHdrNo": 1,
+        "prmDtlCd": "sell003",
+        "lang": "TH",
+        "desc": "รถเข็นสินค้า"
+    },
+    {
+        "pageId": "sell002",
+        "prmHdrNo": 1,
+        "prmDtlCd": "sell002",
+        "lang": "TH",
+        "desc": "สแกนบาร์โค้ด"
+    },
+    {
+        "pageId": "scanBarcode",
+        "prmHdrNo": 1,
+        "prmDtlCd": "scanBarcode",
+        "lang": "TH",
+        "desc": "สแกนบาร์โค้ด"
+    },
+    {
+        "pageId": "rol001",
+        "prmHdrNo": 1,
+        "prmDtlCd": "rol001",
+        "lang": "TH",
+        "desc": "จัดการผู้ใช้งาน"
+    },
+    {
+        "pageId": "rol002",
+        "prmHdrNo": 1,
+        "prmDtlCd": "rol002",
+        "lang": "TH",
+        "desc": "เพิ่มบัญชีผู้ใช้งาน"
+    },
+    {
+        "pageId": "itm_choose",
+        "prmHdrNo": 1,
+        "prmDtlCd": "itm_choose",
+        "lang": "TH",
+        "desc": "เลือกจากรายการสินค้า"
+    },
+    {
+        "pageId": "addbarcode",
+        "prmHdrNo": 1,
+        "prmDtlCd": "addbarcode",
+        "lang": "TH",
+        "desc": "เพิ่มบาร์โค้ด"
+    },
+    {
+        "pageId": "rcv002",
+        "prmHdrNo": 1,
+        "prmDtlCd": "rcv002",
+        "lang": "TH",
+        "desc": "สร้างใบรับสินค้า"
+    },
+    {
+        "pageId": "rcv004",
+        "prmHdrNo": 1,
+        "prmDtlCd": "rcv004",
+        "lang": "TH",
+        "desc": "สร้างใบรับสินค้า"
+    },
+    {
+        "pageId": "rcv001",
+        "prmHdrNo": 1,
+        "prmDtlCd": "rcv001",
+        "lang": "TH",
+        "desc": "รายการใบรับสินค้า"
+    },
+    {
+        "pageId": "sso001",
+        "prmHdrNo": 1,
+        "prmDtlCd": "sso001",
+        "lang": "TH",
+        "desc": "รายงานยอดขายสินค้า"
+    },
+    {
+        "pageId": "pdr001",
+        "prmHdrNo": 1,
+        "prmDtlCd": "pdr001",
+        "lang": "TH",
+        "desc": "รายงานสต็อกสินค้า"
+    },
+    {
+        "pageId": "sell005",
+        "prmHdrNo": 1,
+        "prmDtlCd": "sell005",
+        "lang": "TH",
+        "desc": "ใบเสร็จ"
+    },
+    {
+        "pageId": "ajs001",
+        "prmHdrNo": 1,
+        "prmDtlCd": "ajs001",
+        "lang": "TH",
+        "desc": "ปรับสต็อกสินค้า"
+    },
+    {
+        "pageId": "ajs00102",
+        "prmHdrNo": 1,
+        "prmDtlCd": "ajs00102",
+        "lang": "TH",
+        "desc": "สร้างใบปรับสต็อกสินค้า"
+    },
+    {
+        "pageId": "mms001",
+        "prmHdrNo": 1,
+        "prmDtlCd": "mms001",
+        "lang": "TH",
+        "desc": "การเคลื่อนไหวของสต็อกสินค้า"
+    },
+    {
+        "pageId": "mms002",
+        "prmHdrNo": 1,
+        "prmDtlCd": "mms002",
+        "lang": "TH",
+        "desc": "การเคลื่อนไหวของสต็อกสินค้า"
+    },
+    {
+        "pageId": "mms003",
+        "prmHdrNo": 1,
+        "prmDtlCd": "mms003",
+        "lang": "TH",
+        "desc": "การเคลื่อนไหวของสต็อกสินค้า"
+    }
+]

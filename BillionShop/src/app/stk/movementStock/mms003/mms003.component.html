@@ -1,0 +1,62 @@
+<ion-app>
+    <div class="ion-page">
+        <app-header-with-back-no-search></app-header-with-back-no-search>
+        <ion-content class="background-content">
+            <ion-card id="card-con">
+                <ion-card-content>
+                    <ion-grid>
+                        <ion-row>
+                            <ion-col size="2" class="head_move">วันที่:</ion-col>
+                            <ion-col size="10" class="head_move">{{docDate}}</ion-col>
+                        </ion-row>
+                        <ion-row>
+                            <ion-col size="4" class="head_move">รหัสสินค้า:</ion-col>
+                            <ion-col size="8" class="head_move_detail">{{itm_code}}</ion-col>
+                        </ion-row>
+                        <ion-row>
+                            <ion-col size="4" class="head_move">ชื่อสินค้า:</ion-col>
+                            <ion-col size="8" class="head_move_detail">{{itm_name}} {{itm_capacity}} {{itm_unit}}</ion-col>
+                        </ion-row>
+                        <ion-row>
+                            <ion-col size="8" class="head_move">จำนวนสินค้าคงเหลือ(ยกมา):</ion-col>
+                            <ion-col size="4" class="head_move_detail">{{stk_quoted}} {{itm_sell_unit}}</ion-col>
+                        </ion-row>
+                        <ion-row>
+                            <ion-col size="8" class="head_move">จำนวนสินค้าคงเหลือ(ปัจจุบัน):</ion-col>
+                            <ion-col size="4" class="head_move_detail">{{stk_remain}} {{itm_sell_unit}}</ion-col>
+                        </ion-row>
+                    </ion-grid>
+                </ion-card-content>
+                <ion-row class="list">รายการการเคลื่อนไหวของสต็อกสินค้า</ion-row>
+                <ion-card *ngFor="let mm of srchItms">
+                    <ion-card-content>
+                        <ion-row>
+                            <ion-col size="5" class="bold_details_noti">
+                                <h2><b>ประเภทธุรกรรม:</b></h2>
+                            </ion-col>
+                            <ion-col size="7" class="details_noti">{{mm.transaction_type}}</ion-col>
+                        </ion-row>
+                        <ion-row>
+                            <ion-col size="5" class="bold_details_noti">
+                                <h2><b>ผลต่อคลัง:</b></h2>
+                            </ion-col>
+                            <ion-col size="7" id="font-16" [ngClass]="{
+                                'font-success':mm.effect === 'เพิ่ม',
+                                'font-cancel':mm.effect === 'ลด'
+                            }">{{mm.effect}}</ion-col>
+                        </ion-row>
+                        <ion-row>
+                        </ion-row>
+                        <ion-row>
+                            <ion-col size="5" class="bold_details_noti">
+                                <h2><b>จำนวนสินค้า:</b></h2>
+                            </ion-col>
+                            <ion-col size="7" class="details_noti">{{mm.quantity}} {{itm_sell_unit}}</ion-col>
+
+                        </ion-row>
+                    </ion-card-content>
+                </ion-card>
+            </ion-card>
+        </ion-content>
+    </div>
+</ion-app>

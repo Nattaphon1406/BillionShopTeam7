@@ -1,0 +1,182 @@
+<ion-app>
+    <div class="ion-page">
+        <app-header-with-back-no-search [headerText]="header">
+
+        </app-header-with-back-no-search>
+        <ion-content>
+            <ion-grid>
+
+                <ion-row class="center">
+                    <ion-col>
+                        <p class="product-id">รหัสสินค้า {{ itm.itm_code }}</p>
+                    </ion-col>
+                    <ion-col size="4.6">
+                        <button (click)="presentActionSheet()" class="btn-add-img">เพิ่มรูปภาพ</button>
+                    </ion-col>
+                </ion-row>
+
+
+                <ion-img [src]="itm.itm_img_path" class="img-center"></ion-img>
+
+
+                <ion-row>
+                    <ion-col class="item-input">
+                        <ion-label>
+                            ชื่อสินค้า
+                        </ion-label>
+                        <div class="input-fill-secondary">
+                            <ion-input [(ngModel)]="itm.itm_name" name="itm_name" ngDefaultControl>
+                            </ion-input>
+                        </div>
+                    </ion-col>
+                </ion-row>
+                <!--ปริมาตร-->
+                <ion-row>
+                    <ion-col class="item-input">
+                        <ion-label>
+                            ปริมาตร
+                        </ion-label>
+                        <div class="input-fill-secondary">
+                            <ion-input [(ngModel)]="itm.itm_capacity" name="itm_capacity" #itm_capacity ngDefaultControl></ion-input>
+                        </div>
+                    </ion-col>
+                    <ion-col class="item-input">
+                        <ion-label>
+                            หน่วย
+                        </ion-label>
+                        <div class="input-fill-secondary">
+                            <ion-select placeholder="หน่วย" [(ngModel)]="itm.itm_unit" name="itm_unit" (ionChange)="itm.itm_unit = $event.detail.value" interface="popover" value="itm.itm_unit" okText="Okay" cancelText="Dismiss" #itm_unit ngDefaultControl>
+                                <ion-select-option value="มิลลิลิตร">มิลลิลิตร</ion-select-option>
+                                <ion-select-option value="ลิตร">ลิตร</ion-select-option>
+                                <ion-select-option value="มิลลิกรัม">มิลลิกรัม</ion-select-option>
+                                <ion-select-option value="กรัม">กรัม</ion-select-option>
+                                <ion-select-option value="กิโลกรัม">กิโลกรัม</ion-select-option>
+                                <ion-select-option value="อื่นๆ">อื่นๆ</ion-select-option>
+                            </ion-select>
+                        </div>
+                    </ion-col>
+                </ion-row>
+
+                <ion-row>
+                    <ion-col class="item-input">
+                        <ion-label>
+                            ราคาขาย
+                        </ion-label>
+                        <div class="input-fill-secondary">
+                            <ion-input [(ngModel)]="itm.itm_price" name="itm_price" #itm_price ngDefaultControl>
+                            </ion-input>
+                        </div>
+                    </ion-col>
+                    <ion-col class="item-input">
+                        <ion-label class="none-req">
+                            ราคาต้นทุน
+                        </ion-label>
+                        <div class="input-fill-secondary">
+                            <ion-input [(ngModel)]="itm.itm_cost" name="itm_cost" #itm_cost ngDefaultControl disabled>
+                            </ion-input>
+                        </div>
+                    </ion-col>
+                </ion-row>
+
+                <ion-row>
+                    <ion-col class=" item-input">
+                        <ion-label>
+                            จำนวนขั้นต่ำ
+                        </ion-label>
+                        <div class="input-fill-secondary ">
+                            <ion-input [(ngModel)]="itm.itm_min_quantity" name="itm_itm_min_quantity" #itm_min_quantity ngDefaultControl></ion-input>
+                        </div>
+                    </ion-col>
+                    <ion-col class="item-input">
+                        <ion-label>
+                            หน่วยในการขาย
+                        </ion-label>
+                        <div class="input-fill-secondary ">
+                            <ion-select placeholder="หน่วย " [(ngModel)]="itm.itm_sell_unit" name="itm_sell_unit" (ionChange)="itm.itm_sell_unit = $event.detail.value" interface="popover" value="itm.itm_sell_unit" okText="Okay " cancelText="Dismiss " #itm_sell_unit ngDefaultControl>
+                                <ion-select-option value="ชิ้น">ชิ้น</ion-select-option>
+                                <ion-select-option value="ห่อ">ห่อ</ion-select-option>
+                                <ion-select-option value="ขวด">ขวด</ion-select-option>
+                                <ion-select-option value="แพ็ค">แพ็ค</ion-select-option>
+                                <ion-select-option value="กล่อง">กล่อง</ion-select-option>
+                                <ion-select-option value="อื่นๆ">อื่นๆ</ion-select-option>
+                            </ion-select>
+                        </div>
+                    </ion-col>
+                </ion-row>
+                <!--จำนวน-->
+                <ion-row>
+                    <ion-col class="item-input">
+                        <ion-label>
+                            จำนวน
+                        </ion-label>
+                        <div class="input-fill-secondary ">
+                            <ion-input [(ngModel)]="itm.itm_order_quantity" name="itm_itm_order_quantit " #itm_order_quantit ngDefaultControl></ion-input>
+                        </div>
+                    </ion-col>
+                    <ion-col class="item-input">
+                        <ion-label>
+                            หน่วยในการสั่งซื้อ
+                        </ion-label>
+                        <div class="input-fill-secondary">
+                            <ion-select placeholder="หน่วย " [(ngModel)]="itm.itm_order_unit" name="itm_order_unit" (ionChange)="itm.itm_order_unit = $event.detail.value" interface="popover" value="itm.itm_order_unit" okText=" Okay " cancelText="Dismiss " #itm_order_unit ngDefaultControl>
+                                <ion-select-option value="ชิ้น">ชิ้น</ion-select-option>
+                                <ion-select-option value="ห่อ">ห่อ</ion-select-option>
+                                <ion-select-option value="ขวด">ขวด</ion-select-option>
+                                <ion-select-option value="แพ็ค">แพ็ค</ion-select-option>
+                                <ion-select-option value="กล่อง">กล่อง</ion-select-option>
+                                <ion-select-option value="อื่นๆ">อื่นๆ</ion-select-option>
+                            </ion-select>
+                        </div>
+                    </ion-col>
+                </ion-row>
+
+                <ion-row>
+                    <ion-col class="item-input ">
+                        <ion-label>
+                            ความถี่ในการสั่งซื้อ
+                        </ion-label>
+                        <div class="input-fill-secondary">
+                            <ion-input [(ngModel)]="itm.itm_purchase_frequency " name="itm_purchase_frequencyt " #itm_purchase_frequencyt ngDefaultControl></ion-input>
+                        </div>
+                    </ion-col>
+                    <ion-col class="item-frequency">
+                        <ion-label>
+                            หน่วยความถี่ในการสั่งซื้อ
+                        </ion-label>
+                        <div class="input-fill-secondary">
+                            <ion-input value="วัน" disabled></ion-input>
+                        </div>
+                    </ion-col>
+                </ion-row>
+                <ion-row class="center ">
+                    <ion-col>
+                        <button class="btn-barcode mg-left " (click)="clickBarcode()">ข้อมูลบาร์โค้ด</button>
+                    </ion-col>
+
+                    <ion-col class="item-inner-none-border " (click)=" changeState() ">
+                        <ion-item>
+                            <ion-label style="opacity: 1 !important; ">
+                                {{ product ? " จำหน่ายสินค้า " : "ระงับการจำหน่าย "}}
+                            </ion-label>
+                            <ion-toggle style="opacity: 1 !important; " [checked]="product " [disabled]='true'>
+                            </ion-toggle>
+                        </ion-item>
+                    </ion-col>
+                </ion-row>
+            </ion-grid>
+        </ion-content>
+        <ion-toolbar>
+            <ion-grid>
+                <ion-row>
+                    <ion-col>
+                        <button class="btn-conf font18 " (click)="AlertConfirmAddItem() ">ยืนยัน</button>
+                    </ion-col>
+                    <ion-col>
+                        <button class="btn-canc font18 " (click)="clickcancel() ">ยกเลิก</button>
+                    </ion-col>
+                </ion-row>
+            </ion-grid>
+        </ion-toolbar>
+    </div>
+
+</ion-app>

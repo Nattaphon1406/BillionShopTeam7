@@ -1,0 +1,128 @@
+<ion-app>
+    <div class="ion-page font">
+        <app-header-with-back-save></app-header-with-back-save>
+        <ion-content class="background-content">
+            <ion-grid>
+                <ion-row>
+                    <ion-col size="12">
+                        <ion-card id="card">
+                            <ion-card-content>
+                                <ion-grid>
+                                    <ion-row>
+                                        <ion-col class="bold" id="font-17">รหัสใบรับสินค้า</ion-col>
+                                        <ion-col class="bold" id="font-17">{{riCode}}</ion-col>
+                                    </ion-row>
+                                    <ion-row>
+                                        <ion-col class="bold" id="font-17">วันที่เอกสาร</ion-col>
+                                        <ion-col id="font-17">{{riDate}}</ion-col>
+                                    </ion-row>
+                                    <ion-row>
+                                        <ion-col class="bold" id="font-17">รหัสใบสั่งซื้อ</ion-col>
+                                        <ion-col id="font-17">{{poCode}}</ion-col>
+                                    </ion-row>
+                                    <ion-row>
+                                        <ion-col class="bold" id="font-17">ชื่อผู้สร้างใบรับสินค้า</ion-col>
+                                        <ion-col id="font-17">{{riGenUser}}</ion-col>
+                                    </ion-row>
+                                    <ion-row>
+                                        <ion-col class="bold" id="font-17">สถานะใบรับสินค้า</ion-col>
+                                        <ion-col class="status" id="font-17">{{riStatus}}</ion-col>
+                                    </ion-row>
+                                </ion-grid>
+                                <ion-grid>
+                                    <ion-row style="align-items: center;">
+                                        <ion-col class="bold" id="font-17">รายการสินค้า</ion-col>
+                                        <ion-col>
+                                            <button class="btn-del-all" (click)="btnDelAll()">
+                                                ลบทั้งหมด
+                                            </button>
+                                        </ion-col>
+                                    </ion-row>
+                                    <ion-row>
+                                        <ion-col>
+                                            <div class="input-srchbar-fill">
+                                                <ion-buttons>
+                                                    <ion-icon class="iconsize" slot="icon-only" name="search-outline">
+                                                    </ion-icon>
+                                                </ion-buttons>
+                                                <ion-searchbar search-icon="underfined" animated="true" show-clear-button="alway" clear-icon="close-circle" placeholder="ค้นหาสินค้า" value={{searchVal}} class="srchbar" (ionChange)="checkSearch($event)">
+                                                </ion-searchbar>
+                                                <ion-buttons>
+                                                    <ion-icon slot="icon-only" icon="barcode-outline" (click)="scanSearch()"></ion-icon>
+                                                </ion-buttons>
+                                            </div>
+                                        </ion-col>
+                                    </ion-row>
+                                </ion-grid>
+                            </ion-card-content>
+                            <ion-card *ngFor="let itm of srchItms" id="card-item">
+                                <ion-card-content>
+                                    <ion-grid>
+                                        <ion-row class="center">
+                                            <ion-col size="6" class="bold" id="font-16">รหัสสินค้า:</ion-col>
+                                            <ion-col size="5" id="font-16">{{itm.itm_code}}</ion-col>
+                                            <ion-col size="1">
+                                                <ion-icon name="trash" class="trash" (click)="btnDel(itm.itm_id)"></ion-icon>
+                                            </ion-col>
+                                        </ion-row>
+                                        <ion-row>
+                                            <ion-col class="bold" id="font-16">ชื่อสินค้า:</ion-col>
+                                            <ion-col id="font-16">{{itm.itm_name}} {{itm.itm_capacity}} {{itm.itm_unit}}
+                                            </ion-col>
+                                        </ion-row>
+                                        <ion-row>
+                                            <ion-col class="bold" id="font-16">จำนวนสินค้า/{{itm.itm_order_unit}}:</ion-col>
+                                            <ion-col id="font-16">{{itm.itm_quantity_per_unit}} {{itm.itm_sell_unit}}</ion-col>
+                                        </ion-row>
+                                        <ion-row class="center">
+                                            <ion-col class="bold center" id="font-16" size="6">จำนวนที่รับมา:
+                                            </ion-col>
+                                            <ion-col id="font-16">
+                                                <ion-input class="input-rcvAmount" value="{{itm.order_quantity}}" [(ngModel)]="itm.order_quantity" ngDefaultControl>
+                                                </ion-input>
+                                            </ion-col>
+                                            <ion-col id="font-16">{{itm.itm_order_unit}}</ion-col>
+                                        </ion-row>
+                                        <ion-row class="center">
+                                            <ion-col class="bold center" id="font-16" size="6">กรอกราคาซื้อ:
+                                            </ion-col>
+                                            <ion-col id="font-16">
+                                                <ion-input class="input-rcvAmount" value="{{itm.ordAmount}}" [(ngModel)]="itm.ordAmount" ngDefaultControl>
+                                                </ion-input>
+                                            </ion-col>
+                                            <ion-col id="font-16">บาท</ion-col>
+                                        </ion-row>
+                                    </ion-grid>
+                                </ion-card-content>
+                            </ion-card>
+                        </ion-card>
+                    </ion-col>
+                </ion-row>
+            </ion-grid>
+            <ion-fab vertical="bottom" horizontal="end" slot="fixed">
+                <ion-fab-button>
+                    <ion-icon name="add" style="width: 40px; height: 40px;"></ion-icon>
+                </ion-fab-button>
+                <ion-fab-list side="top">
+                    <ion-fab-button color="light" style="width: 53px; height: 53px;" (click)=" barcodePage()">
+                        <ion-icon name="barcode-outline" style="width: 40px; height: 40px;"></ion-icon>
+                    </ion-fab-button>
+                    <ion-fab-button color="light" style="width: 53px; height: 53px;" (click)="itemListPage()">
+                        <ion-icon name="cart-outline" style="width: 40px; height: 40px;"></ion-icon>
+                    </ion-fab-button>
+                </ion-fab-list>
+            </ion-fab>
+        </ion-content>
+        <ion-toolbar>
+            <ion-grid style="background-color: #FFFFFF">
+                <ion-row>
+                    <ion-col>
+                        <div>
+                            <button class="btn-add confirm" id="font-18" (click)="btnConfirm()">ยืนยันใบรับสินค้า</button>
+                        </div>
+                    </ion-col>
+                </ion-row>
+            </ion-grid>
+        </ion-toolbar>
+    </div>
+</ion-app>

@@ -1,0 +1,75 @@
+<ion-app>
+    <app-header-with-back-no-search (click)="backpage()"></app-header-with-back-no-search>
+
+    <ion-content>
+        <ion-grid>
+            <ion-row>
+                <ion-col>
+                    <div class="title">
+                        รหัสสินค้า <span>{{goodId}}</span>
+                    </div>
+                </ion-col>
+            </ion-row>
+            <ion-row center>
+                <ion-col class="item-input">
+                    <ion-label>
+                        ชื่อสินค้า
+                    </ion-label>
+                    <div class="input-fill-secondary">
+                        <ion-input value="{{name}}" disabled></ion-input>
+                    </div>
+                </ion-col>
+            </ion-row>
+            <ion-row size=12>
+                <ion-col size=4>
+                    <button class="btn" (click)="createBarCode('none')">เพิ่มบาร์โค้ด
+                    </button>
+                </ion-col>
+                <ion-col push=0.5 size=5>
+                    <button class="btn" (click)="createBarCode('BSS')">สร้างบาร์โค้ด BSS
+                    </button>
+                </ion-col>
+            </ion-row>
+            <ion-row>
+                <ion-col>
+                    <button class="btn-del-all" *ngIf="numberOfBarcode > 0" (click)="alertDeleteAllBarcode()">ลบทั้งหมด
+                        </button>
+                </ion-col>
+            </ion-row>
+            <ion-row>
+                <ion-col *ngIf="(itmBar || []).length !== 0">
+                    <ion-row>
+                        <ion-col class="item-input " size="12" *ngFor="let itm of (itmBar || [] )">
+                            <ion-label>
+                                <span *ngIf="itm.type == '1'">รหัสบาร์โค้ด</span>
+                                <span *ngIf="itm.type != '1'">รหัสบาร์โค้ดBSS</span> {{itm.key}}
+                            </ion-label>
+                            <div>
+                                <ion-item-sliding>
+                                    <ion-item color="medium">
+                                        <ion-input *ngIf="itm.barcode.length == 13" (ionChange)="addBarcode(itm.key,$event)" value="{{itm.barcode}}" placeholder="{{itm.barcode}}" disabled></ion-input>
+                                        <ion-input *ngIf="itm.barcode.length != 13" (ionChange)="addBarcode(itm.key,$event)" value="{{itm.barcode}}" placeholder="{{itm.barcode}}"></ion-input>
+                                        <ion-buttons (ionFocus)="scan(itm.key)">
+                                            <app-icon-dark-scanbarcode *ngIf="itm.type == '1'&& itm.barcode.length != 13"></app-icon-dark-scanbarcode>
+                                        </ion-buttons>
+                                    </ion-item>
+                                    <ion-item-options side="end">
+                                        <ion-item-option color="danger " expandable (click)="alertDeleteBarcode(itm.key) ">
+                                            ลบ
+                                        </ion-item-option>
+                                    </ion-item-options>
+                                </ion-item-sliding>
+                            </div>
+                        </ion-col>
+                    </ion-row>
+                </ion-col>
+            </ion-row>
+            <ion-row center>
+                <ion-col style=" text-align: center; " *ngIf="(itmBar || []).length===0 ">
+
+                </ion-col>
+            </ion-row>
+        </ion-grid>
+    </ion-content>
+
+</ion-app>

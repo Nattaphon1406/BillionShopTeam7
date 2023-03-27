@@ -1,0 +1,30 @@
+hr {
+    height: 1px !important;
+    width: 200%!important;
+    background: black !important;
+    display: block !important;
+    font-size: 2em !important;
+    opacity: 1 !important;
+    visibility: visible !important;
+    margin-bottom: 5px;
+}
+
+#noti-card {
+    border-left-color: #EEC867;
+    color: black;
+    width: 120% !important;
+}
+
+ion-card-title,
+h4 {
+    color: black;
+}
+
+ion-item {
+    --padding-end: 0px;
+    --inner-padding-end: 0px;
+}
+
+ion-card {
+    margin-top: 0.5px;
+}

@@ -1,0 +1,53 @@
+#card {
+    background: #FFFFFF;
+    border-radius: 10px;
+    align-items: center;
+}
+
+.status-progress {
+    border-left-style: solid !important;
+    border-left-width: 10px !important;
+    border-left-color: #E57D03;
+}
+
+.status-confirm {
+    border-left-style: solid !important;
+    border-left-width: 10px !important;
+    border-left-color: #6774EE;
+}
+
+.font {
+    line-height: 20px;
+}
+
+.font #font-16 {
+    font-size: 16px;
+    color: #2C2C2C;
+}
+
+.font-progress {
+    color: #E57D03;
+}
+
+.font-confirm {
+    color: #6774EE;
+}
+
+.font #font-16.bold {
+    font-weight: bold;
+}
+
+.font #font-18 {
+    font-size: 18px;
+    color: #2C2C2C;
+}
+
+.font #font-18.bold {
+    font-weight: bold;
+}
+
+.font #btn-createPO {
+    font-weight: bold;
+    font-size: 20px;
+    color: #FFFFFF;
+}

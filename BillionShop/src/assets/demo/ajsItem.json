@@ -1,0 +1,18 @@
+[
+    {
+        "itm_code": "0000000001",
+        "itm_name": "โค้ก",
+        "itm_capacity": "1.25",
+        "itm_unit": "ลิตร",
+        "itm_sell_unit": "ชิ้น",
+        "sad_quantity": "1500"
+    },
+    {
+        "itm_code": "0000000002",
+        "itm_name": "สไปร์ท",
+        "itm_capacity": "1.25",
+        "itm_unit": "ลิตร",
+        "itm_sell_unit": "ชิ้น",
+        "sad_quantity": "278"
+    }
+]

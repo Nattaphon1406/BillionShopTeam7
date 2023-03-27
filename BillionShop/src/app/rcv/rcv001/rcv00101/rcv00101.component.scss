@@ -1,0 +1,98 @@
+.info_PO {
+    font-style: normal;
+    align-items: center;
+    color: #2C2C2C;
+    #info_Bold {
+        font-weight: bold;
+        color: --ion-color-success;
+    }
+    #info_Status {
+        color: #D67300;
+    }
+    #info_Center {
+        align-items: center;
+    }
+    #font-17 {
+        font-size: 17px;
+    }
+    #font-16 {
+        font-size: 16px;
+    }
+    .color_recomm {
+        color: red;
+    }
+    .input-fill-secondary {
+        flex-direction: row;
+        align-items: center;
+        padding: 3px;
+        background: #E5E5E5;
+        border-radius: 10px;
+        border: 0px;
+    }
+}
+
+.background-content{
+    --background: #EAEAEA !important;
+}
+
+.btn-confirm {
+    width: 181px;
+    height: 42px;
+    border-radius: 10px;
+    background-color: #369FFF;
+    align-items: center;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 16px;
+    /* or 114% */
+    text-align: center;
+    text-transform: uppercase;
+    color: #FFFFFF;
+}
+
+.btn-cancel {
+    width: 181px;
+    height: 42px;
+    border-radius: 10px;
+    background-color: #FF3636;
+    align-items: center;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 16px;
+    /* or 114% */
+    text-align: center;
+    text-transform: uppercase;
+    color: #FFFFFF;
+}
+
+#btn-del-all {
+    width: 89px;
+    height: 33px;
+    background: #F41832;
+    border-radius: 10px;
+    color: #FFFFFF;
+    margin-left: 65px;
+}
+
+#srchbar {
+    --background: rgba(118, 118, 128, 0.18);
+    --border-radius: 10px;
+    --color: #747474;
+    --placeholder-font-style: normal;
+    --placeholder-font-weight: 500;
+}
+
+#trash {
+    width: 30px;
+    height: 30px;
+    color: #F41832;
+    margin-right: 0%;
+}
+
+.center {
+    align-items: center;
+}

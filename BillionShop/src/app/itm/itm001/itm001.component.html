@@ -1,0 +1,88 @@
+<ion-app>
+    <div class="ion-page">
+        <app-header-with-menu (ionChange)="search($event)"></app-header-with-menu>
+        <app-menu-ham></app-menu-ham>
+        <ion-content class="background-content">
+            <div>
+                <ion-grid *ngIf="showListItem; else alertSearchNoResult">
+                    <ion-row>
+                        <ion-col size="6" *ngFor="let itm of srchItem">
+                            <ion-card class="card" button (click)="edit(itm.id)" [ngClass]="{'back-ground-statusgreen':itm.statusitem === 'จำหน่ายสินค้า','back-ground-statusred':itm.statusitem === 'ระงับจำหน่ายสินค้า'}">
+                                <ion-card-header>
+
+                                    <ion-img [src]="itm.img" class="set-img"></ion-img>
+
+                                </ion-card-header>
+                                <ion-card-content>
+                                    <ion-grid>
+                                        <ion-row>
+                                            <ion-col>
+                                                รหัสสินค้า :
+                                            </ion-col>
+                                        </ion-row>
+                                        <ion-row>
+                                            <ion-col>
+                                                {{itm.itemcode}}
+                                            </ion-col>
+                                        </ion-row>
+                                        <ion-row *ngIf="seachBarcode">
+                                            <ion-col>
+                                                รหัสบาร์โค้ด
+                                            </ion-col>
+                                        </ion-row>
+
+                                        <ion-row *ngIf="seachBarcode">
+                                            <ion-col>
+                                                {{itm.barcode}}
+                                            </ion-col>
+                                        </ion-row>
+                                        <ion-row>
+                                            <ion-col>
+                                                ชื่อสินค้า :
+                                            </ion-col>
+                                        </ion-row>
+
+                                        <ion-row>
+                                            <ion-col class="textoverflow">
+                                                {{itm.itemname}} {{itm.itemcapacity}} {{itm.itemunit}}
+                                            </ion-col>
+                                        </ion-row>
+
+
+                                        <ion-row>
+                                            <ion-col>
+                                                สถานะ :
+                                            </ion-col>
+                                        </ion-row>
+
+                                        <ion-row>
+                                            <ion-col [ngClass]="{'Statusgreen':itm.statusitem === 'จำหน่ายสินค้า','Statusred':itm.statusitem === 'ระงับจำหน่ายสินค้า'}">
+                                                {{itm.statusitem}}
+                                            </ion-col>
+                                        </ion-row>
+                                    </ion-grid>
+                                </ion-card-content>
+                            </ion-card>
+                        </ion-col>
+                    </ion-row>
+                </ion-grid>
+                <ng-template #alertSearchNoResult>
+                    <ion-card-content *ngIf="alertItem == true" class="alert-notfind">
+                        ไม่พบข้อมูลที่ค้นหา
+                    </ion-card-content>
+                </ng-template>
+            </div>
+        </ion-content>
+        <ion-toolbar>
+            <ion-grid>
+                <ion-row>
+                    <ion-col size=" 10 " offset="1 ">
+                        <div>
+                            <button expand="full " id="One-btn-toolbar" class="btn-add " (click)="btnAdd() ">เพิ่มสินค้า</button>
+                        </div>
+                    </ion-col>
+                </ion-row>
+            </ion-grid>
+        </ion-toolbar>
+    </div>
+</ion-app>

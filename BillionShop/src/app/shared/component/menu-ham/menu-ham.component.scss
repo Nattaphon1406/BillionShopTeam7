@@ -1,0 +1,40 @@
+h2 {
+    margin-left: 20px;
+    font-weight: 300;
+    color: white;
+}
+
+p {
+    margin-left: 20px;
+    font-size: 16px;
+    color: white;
+}
+
+ion-card-subtitle {
+    text-align: left;
+}
+
+ion-label {
+    text-decoration: none;
+    color: #1E1E23;
+    opacity: 1;
+    font-weight: 400;
+    transition: 200ms;
+}
+
+ion-item {
+    margin-bottom: 31px;
+}
+
+#sidenav {
+    ion-item-group[submenu] {
+        overflow: hidden;
+        display: block;
+        height: 0;
+        transition: height .3s linear;
+        padding-left: 20%;
+        &.visible {
+            height: inherit;
+        }
+    }
+}

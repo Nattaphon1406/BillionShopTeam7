@@ -1,0 +1,51 @@
+<ion-app>
+    <div class="ion-page">
+        <app-header-with-menu-no-search></app-header-with-menu-no-search>
+        <app-menu-ham></app-menu-ham>
+        <ion-content class="background-content">
+            <ion-grid *ngIf="showNotify;else alertNotNotify">
+                <ion-row class="ion-justify-content-end">
+                    <ion-col size="8"> </ion-col>
+                    <ion-col> </ion-col>
+                </ion-row>
+                <div [hidden]=ishidden>
+                    <ion-row class="ion-justify-content-start">
+                        <ion-col>
+                            <h4>{{date}}</h4>
+                            <hr />
+                        </ion-col>
+                        <ion-col> </ion-col>
+                    </ion-row>
+                    <ion-row>
+                        <ion-col>
+                            <ion-item-sliding class="ion-justify-content">
+                                <ion-item button (click)="showNotiDetail()" class="ion-no-padding">
+                                    <div class="tab-status"></div>
+                                    <div class="list-card" id="noti-card">
+                                        <ion-card-header>
+                                            <ion-card-subtitle></ion-card-subtitle>
+                                            <ion-card-title class="font-color">รายการสินค้าใกล้หมดสต็อกสินค้า</ion-card-title>
+                                        </ion-card-header>
+                                        <ion-card-content>
+                                            จำนวน {{ notiamount }} รายการ
+                                        </ion-card-content>
+                                    </div>
+                                </ion-item>
+                                <ion-item-options side="end" class="ion-no-padding">
+                                    <ion-item-option color="danger" expandable (click)="AlertDeleteThis()">
+                                        ลบ
+                                    </ion-item-option>
+                                </ion-item-options>
+                            </ion-item-sliding>
+                        </ion-col>
+                    </ion-row>
+                </div>
+            </ion-grid>
+            <ng-template #alertNotNotify>
+                <ion-card-content class="alert-notfind">
+                    ไม่มีรายการแจ้งเตือน
+                </ion-card-content>
+            </ng-template>
+        </ion-content>
+    </div>
+</ion-app>

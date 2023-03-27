@@ -1,0 +1,58 @@
+<ion-app>
+
+    <div class="ion-page font">
+        <app-header-with-menu (ionChange)="onSearch($event)"></app-header-with-menu>
+        <app-menu-ham></app-menu-ham>
+
+        <ion-content class="background-content">
+            <ion-grid *ngIf="showListRcv; else alertNotFound">
+                <ion-row *ngFor="let ri of srchItms">
+                    <ion-col>
+                        <ion-card id="card" (click)="showDetailRcv(ri.riId, ri.riCode, ri.riDate, ri.poCode, ri.riGenUser, ri.riStatus)" [ngClass]="{ 'status-confirm': ri.riStatus === 'ยืนยันใบรับสินค้า' , 'status-progress': ri.riStatus ==='อยู่ระหว่างดำเนินการ' } ">
+                            <ion-card-content>
+                                <ion-grid>
+                                    <ion-row>
+                                        <ion-col class="bold " id="font-16 ">รหัสใบรับสินค้า</ion-col>
+                                        <ion-col class="bold " id="font-16 ">{{ri.riCode}}</ion-col>
+                                    </ion-row>
+                                    <ion-row>
+                                        <ion-col id="font-16 ">วันที่เอกสาร</ion-col>
+                                        <ion-col id="font-16 ">{{ri.riDate}}</ion-col>
+                                    </ion-row>
+                                    <ion-row>
+                                        <ion-col class="bold " id="font-16 ">รหัสใบสั่งซื้อ</ion-col>
+                                        <ion-col class="bold " id="font-16 ">{{ri.poCode}}</ion-col>
+                                    </ion-row>
+                                    <ion-row>
+                                        <ion-col id="font-16 ">ชื่อผู้สร้างใบรับสินค้า</ion-col>
+                                        <ion-col id="font-16 " size="6">{{ri.riGenUser}}</ion-col>
+                                    </ion-row>
+                                    <ion-row id="ri_status ">
+                                        <ion-col id="font-16 ">สถานะใบรับสินค้า</ion-col>
+                                        <ion-col id="font-16 " [ngClass]="{ 'font-progress': ri.riStatus === 'อยู่ระหว่างดำเนินการ', 'font-confirm': ri.riStatus === 'ยืนยันใบรับสินค้า' } ">
+                                            {{ri.riStatus}}
+                                        </ion-col>
+                                    </ion-row>
+                                </ion-grid>
+                            </ion-card-content>
+                        </ion-card>
+                    </ion-col>
+                </ion-row>
+            </ion-grid>
+            <ng-template #alertNotFound>
+                <ion-card-content *ngIf="alertSearchNotFound" class="alert-notfind">
+                    ไม่พบข้อมูลที่ค้นหา
+                </ion-card-content>
+            </ng-template>
+        </ion-content>
+        <ion-toolbar>
+            <ion-grid>
+                <ion-row>
+                    <ion-col size="10 " offset="1 ">
+                        <button class="btn-add font" id="btn-createPO" (click)="findPoByData() ">สร้างใบรับสินค้า</button>
+                    </ion-col>
+                </ion-row>
+            </ion-grid>
+        </ion-toolbar>
+    </div>
+</ion-app>

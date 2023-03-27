@@ -1,0 +1,69 @@
+<ion-app>
+    <div class="ion-page">
+        <app-header-with-menu (ionChange)="search($event)"></app-header-with-menu>
+        <app-menu-ham></app-menu-ham>
+        <ion-content class="background-content">
+            <ion-row>
+                <ion-col>
+                    <ion-item>
+                        <ion-label>From</ion-label>
+                        <ion-datetime value="{{dateValue1}}" #datetime1 (ionChange)="dateChangedFirst(datetime1.value)" max="{{toDay}}"></ion-datetime>
+                    </ion-item>
+                </ion-col>
+                <ion-col>
+                    <ion-item>
+                        <ion-label>To</ion-label>
+                        <ion-datetime value="{{dateValue2}}" #datetime2 (ionChange)="dateChangedSecond(datetime2.value)" min="{{min}}" max="{{toDay}}"></ion-datetime>
+                    </ion-item>
+                </ion-col>
+            </ion-row>
+
+            <div *ngIf="showListSalesReport; else alertNotFound ">
+                <ion-card class="font " *ngFor="let rp of srchRps ">
+                    <ion-card-content>
+                        <ion-grid>
+                            <ion-row>
+                                <ion-col class="bold size18 ">
+                                    รหัสสินค้า {{rp.itm_code}}
+                                </ion-col>
+                            </ion-row>
+                            <ion-row>
+                                <ion-col class="size18 ">
+                                    ชื่อสินค้า : {{rp.itm_name}} {{rp.itm_capacity}} {{rp.itm_unit}}
+                                </ion-col>
+                            </ion-row>
+                            <ion-row>
+                                <ion-col class="size16 " size="6">
+                                    <span class="bold ">จำนวนที่ขายได้ : </span> {{rp.itm_sell_quantity}} {{rp.itm_sell_unit}}
+                                </ion-col>
+                                <ion-col class="size16 " offset="0.5">
+                                    <span class="bold ">ยอดขาย  </span> {{rp.itm_sales}} บาท
+                                </ion-col>
+                            </ion-row>
+                        </ion-grid>
+                    </ion-card-content>
+                </ion-card>
+            </div>
+            <ng-template #alertNotFound>
+                <ion-card-content *ngIf="alertSearchNotFound " class="alert-notfind ">
+                    ไม่พบข้อมูลที่ค้นหา
+                </ion-card-content>
+            </ng-template>
+        </ion-content>
+        <ion-toolbar class="toolbar-size font ">
+            <ion-grid class="bold size20 ">
+                <ion-row>
+                    <ion-col size="6 ">
+                        ยอดขายรวมทั้งสิ้น
+                    </ion-col>
+                    <ion-col class="ion-text-end " size="4 ">
+                        {{totalSales.toFixed(2)}}
+                    </ion-col>
+                    <ion-col class="ion-text-end " size="2 ">
+                        บาท
+                    </ion-col>
+                </ion-row>
+            </ion-grid>
+        </ion-toolbar>
+    </div>
+</ion-app>

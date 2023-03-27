@@ -1,0 +1,57 @@
+    .scan-box {
+        border: 2px solid white;
+        box-shadow: 0 0 0 100vmax rgba(0, 0, 0, 0.5);
+        content: '';
+        display: block;
+        left: 50%;
+        height: 30%;
+        position: absolute;
+        top: 32%;
+        transform: translate(-50%, -50%);
+        width: 65%;
+    }
+    
+    ion-card {
+        background-color: #F3F3F3;
+        margin: 0;
+        display: flex;
+        flex-direction: column;
+    }
+    
+    .bg-card {
+        background-color: #FFFFFF;
+    }
+    
+    .scroll-bg {
+        background: #F3F3F3;
+        height: 350px;
+    }
+    
+    .scroll-div {
+        height: 80%;
+        overflow: -moz-hidden-unscrollable;
+        overflow: scroll;
+    }
+    
+    .scroll-object {
+        padding: 0;
+        margin: 0%;
+    }
+    
+    ion-list {
+        overflow: hidden !important;
+        overflow-y: auto !important;
+         ::-webkit-scrollbar {
+            display: list-item !important;
+        }
+    }
+    
+    .set-img-bk-scan {
+        margin-top: auto;
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: auto;
+        object-fit: fill !important;
+        width: 64% !important;
+        height: 64% !important;
+    }

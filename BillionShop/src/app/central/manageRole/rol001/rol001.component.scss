@@ -1,0 +1,46 @@
+.Bgrol001 {
+    background-color: rgb(243, 243, 243)!important;
+}
+
+ion-content {
+    --ion-background-color: rgb(243, 243, 243);
+}
+
+ion-card {
+    --ion-background-color: rgb(255, 255, 255);
+}
+
+ion-fab {
+    --ion-background-color: rgb(255, 255, 255);
+}
+
+#card {
+    border-radius: 10px;
+    border-left-color: white;
+}
+
+.font {
+    font-style: normal;
+    line-height: 20px;
+    .bold {
+        font-weight: bold;
+    }
+    .center {
+        align-items: center;
+    }
+}
+
+ion-list {
+    --padding-end: 0px;
+    --inner-padding-end: 0px;
+    background-color: #F3F3F3 !important;
+}
+
+ion-item {
+    background-color: #F3F3F3 !important;
+    color: black;
+    --padding-start: 0px;
+    --inner-padding-start: 0px;
+    --padding-end: 0px;
+    --inner-padding-end: 0px;
+}

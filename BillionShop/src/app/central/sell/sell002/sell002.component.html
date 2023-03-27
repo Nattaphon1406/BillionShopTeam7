@@ -1,0 +1,59 @@
+<ion-app>
+    <ion-header>
+        <ion-toolbar class="header">
+            <app-header-with-back-no-search (click)="stopScanner()"></app-header-with-back-no-search>
+        </ion-toolbar>
+    </ion-header>
+    <div class="scan-box"></div>
+    <div>
+        <ion-card>
+            <ion-card-content>
+                <ion-row>
+                    <div class="scroll-bg">
+                        <div class="scroll-div">
+                            <div class="scroll-object">
+                                <ion-col size="12" *ngFor="let itm of itemInBucket">
+                                    <ion-card class="bg-card">
+                                        <ion-row>
+                                            <ion-col size="4">
+                                                <ion-img class="set-img-bk-scan" [src]="itm.img"></ion-img>
+                                            </ion-col>
+                                            <ion-col>
+                                                <ion-row>
+                                                    <ion-col>รหัสสินค้า:{{itm.itemcode}}</ion-col>
+                                                    <ion-col size="2">
+                                                        <ion-icon name="trash" class="trash" button (click)="AlertDeleteProduct(itm.id)">
+                                                        </ion-icon>
+                                                    </ion-col>
+                                                </ion-row>
+                                                <ion-row>
+                                                    <ion-col class="edit-font">{{itm.itemname}} {{itm.itemcapacity}} {{itm.itemunit}}</ion-col>
+                                                </ion-row>
+                                                <ion-row class="ion-align-items-center">
+                                                    <ion-col>{{itm.itemprice}} บาท</ion-col>
+                                                    <ion-col>
+                                                        <ion-icon button (click)="clickEditnumber(itm.id,'remove')" name="remove-circle" class="set-icon"></ion-icon>
+                                                        <ion-col class="ion-text-center">{{itm.numberItem}}</ion-col>
+                                                        <ion-icon button (click)="clickEditnumber(itm.id,'add')" name="add-circle" class="set-icon"></ion-icon>
+                                                    </ion-col>
+                                                </ion-row>
+                                            </ion-col>
+                                        </ion-row>
+                                    </ion-card>
+                                </ion-col>
+                            </div>
+                        </div>
+                    </div>
+                </ion-row>
+            </ion-card-content>
+        </ion-card>
+        <div>
+            <ion-fab vertical="bottom" horizontal="end" slot="fixed" button>
+                <ion-fab-button (click)="goPageBucket()" class="cart-btn">
+                    <ion-icon name="cart" style="width: 40px; height: 40px;"></ion-icon>
+                </ion-fab-button>
+                <ion-badge color="danger" vertical="top" *ngIf="alertNumberOfItem > 0" class="edit-badge"> {{alertNumberOfItem}}</ion-badge>
+            </ion-fab>
+        </div>
+    </div>
+</ion-app>

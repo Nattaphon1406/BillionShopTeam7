@@ -1,0 +1,44 @@
+<ion-app>
+    <div class="ion-page">
+        <app-header-with-menu-no-search></app-header-with-menu-no-search>
+        <app-menu-ham></app-menu-ham>
+
+        <ion-content class="background-content">
+            <ion-row>
+                <ion-col>
+                    <ion-item>
+                        <ion-label>From</ion-label>
+                        <ion-datetime value="{{dateValue1}}" #datetime1 (ionChange)="dateChangedFirst(datetime1.value)" max="{{toDay}}"></ion-datetime>
+                    </ion-item>
+                </ion-col>
+                <ion-col>
+                    <ion-item>
+                        <ion-label>To</ion-label>
+                        <ion-datetime value="{{dateValue2}}" #datetime2 (ionChange)="dateChangedSecond(datetime2.value)" min="{{min}}" max="{{toDay}}"></ion-datetime>
+                    </ion-item>
+                </ion-col>
+            </ion-row>
+
+            <ion-col *ngFor="let sa of srchItms">
+                <ion-title class="font-color">{{sa.datemovement}}</ion-title>
+                <hr />
+                <ion-card id="card" (click)="gotolistmovement(sa.datemovement)">
+                    <ion-card-content>
+                        <ion-grid class="frame">
+
+                            <ion-row class="frame">
+                                <ion-col id="font-17">รายการสินค้า</ion-col>
+
+                            </ion-row>
+                            <ion-row class="frame">
+                                <ion-col id="font-17">จำนวน {{sa.numtype}} รายการ</ion-col>
+
+                            </ion-row>
+
+                        </ion-grid>
+                    </ion-card-content>
+                </ion-card>
+            </ion-col>
+        </ion-content>
+    </div>
+</ion-app>

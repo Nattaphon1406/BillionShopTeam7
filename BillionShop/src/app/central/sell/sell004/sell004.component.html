@@ -1,0 +1,72 @@
+<ion-app>
+    <div class="ion-page">
+        <app-header-with-back-no-search></app-header-with-back-no-search>
+        <ion-content class="background-content">
+            <ion-grid>
+                <ion-row class="ion-justify-content-start sum">
+                    <ion-col size="4">
+                        <div class="ion-float-start">
+                            <h1>ยอดรวม</h1>
+                        </div>
+                    </ion-col>
+                    <ion-col size="8">
+                        <div class="ion-float-end">
+                            <h1>{{total}}</h1>
+                        </div>
+                    </ion-col>
+                </ion-row>
+
+                <ion-row>
+                    <ion-col>
+                        <h1>เงินที่รับมา</h1>
+                        <input type="number" placeholder="0.00" step="0.01" (change)="transformAmount($event)" (ngModelChange)="cash=$event" [ngModelOptions]="{updateOn: 'blur'}" [ngModel]="cash || 'defaultValue' ">
+                    </ion-col>
+                </ion-row>
+
+                <ion-row class="ion-margin-top">
+                    <ion-col size="2">
+                        <ion-buttons class="btn-cash" (click)="addMoney(20)" formtarget="_blank">20</ion-buttons>
+                    </ion-col>
+                    <ion-col size="2">
+                        <ion-buttons class="btn-cash" (click)="addMoney(50)">50</ion-buttons>
+                    </ion-col>
+                    <ion-col size="2">
+                        <ion-buttons class="btn-cash" (click)="addMoney(100)">100</ion-buttons>
+                    </ion-col>
+                    <ion-col size="3">
+                        <ion-buttons class="btn-cash" (click)="addMoney(500)">500</ion-buttons>
+                    </ion-col>
+                    <ion-col size="3">
+                        <ion-buttons class="btn-cash" (click)="addMoney(1000)">1000</ion-buttons>
+                    </ion-col>
+                </ion-row>
+
+                <ion-row class="ion-justify-content-start">
+                    <ion-col size="4">
+                        <div class="ion-float-start">
+                            <h1>เงินทอน</h1>
+                        </div>
+                    </ion-col>
+                    <ion-col size="8">
+                        <div class="ion-float-end">
+                            <h1>{{change || "0.00"}}</h1>
+                        </div>
+                    </ion-col>
+                </ion-row>
+            </ion-grid>
+        </ion-content>
+
+        <ion-toolbar>
+            <ion-grid>
+                <ion-row>
+                    <ion-col>
+                        <div>
+                            <button class="btn-confirm btn-add center" (click)="chekpayment()">ยืนยันการชำระเงิน</button>
+                        </div>
+                    </ion-col>
+                </ion-row>
+            </ion-grid>
+        </ion-toolbar>
+    </div>
+
+</ion-app>

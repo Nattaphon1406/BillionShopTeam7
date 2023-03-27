@@ -1,0 +1,26 @@
+.header .detail{
+    font-size: 20px !important;
+}
+.border{
+    border-style: solid;
+}
+
+.footer-emp{
+    padding-bottom: 50px !important;
+}
+.line{
+    border-top:3px solid black;
+    border-top-style: dashed;
+    padding-top: 8px;
+} 
+.alltext{
+    color:black !important;
+    border-radius: 10px;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 40%;
+    transform: translateY(-40%);
+
+
+}

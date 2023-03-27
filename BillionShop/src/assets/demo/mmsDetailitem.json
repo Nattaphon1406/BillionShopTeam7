@@ -1,0 +1,21 @@
+[{
+        "transation_Type": "รับสินค้า",
+        "stock_Effect": "เพิ่ม",
+        "mms_item_quantity": "3 ซอง"
+    },
+    {
+        "transation_Type": "จำหน่ายสินค้า",
+        "stock_Effect": "ลด",
+        "mms_item_quantity": "5 ซอง"
+    },
+    {
+        "transation_Type": "ปรับสต็อกสินค้า",
+        "stock_Effect": "เพิ่ม",
+        "mms_item_quantity": "1 ซอง"
+    },
+    {
+        "transation_Type": "รับสินค้า",
+        "stock_Effect": "ลด",
+        "mms_item_quantity": "2 ซอง"
+    }
+]

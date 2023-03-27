@@ -1,0 +1,48 @@
+#card-con { 
+    border-radius: 10px;
+    align-items: center;
+    background: #B8F2FF;
+}
+
+.head_move {
+    font-family: Roboto;
+    font-size: 18px;
+    font-weight: bold;
+    color: black;
+}
+
+.head_move_detail {
+    font-family: Roboto;
+    font-size: 18px;
+    color: black;
+}
+
+.bold_details_noti {
+    font-family: Roboto;
+    color: black;
+}
+
+.details_noti {
+    font-family: Roboto;
+    font-size: 16px;
+    color: black;
+}
+
+.list {
+    font-family: Roboto;
+    font-size: 18px;
+    margin-left: 11px;
+    font-weight: bold;
+    color: black;
+}
+
+#font-16 {
+    font-size: 16px;
+    color: #000000;
+    &.font-success {
+        color: #00B62E;
+    }
+    &.font-cancel {
+        color: #EA1010;
+    }
+}

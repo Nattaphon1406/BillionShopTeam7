@@ -1,0 +1,33 @@
+[{
+    "itm_code": "0000000001",
+    "itm_name": "โค้ก",
+    "itm_capacity": "1.25",
+    "itm_Unit": "ลิตร",
+    "rid_receive_quantity": "20",
+    "itm_order_unit": "แพ็ค",
+    "rid_puantity_price": "1500"
+}, {
+    "itm_code": "0000000002",
+    "itm_name": "สไปร์ท",
+    "itm_capacity": "1.25",
+    "itm_Unit": "ลิตร",
+    "rid_receive_quantity": "2",
+    "itm_order_unit": "แพ็ค",
+    "rid_puantity_price": "278"
+}, {
+    "itm_code": "0000000003",
+    "itm_name": "มาม่า รสต้มยำ",
+    "itm_capacity": "45",
+    "itm_Unit": "กรัม",
+    "rid_receive_quantity": "9",
+    "itm_order_unit": "แพ็ค",
+    "rid_puantity_price": "600"
+}, {
+    "itm_code": "0000000004",
+    "itm_name": "มาม่า รสต้มยำน้ำข้นทะเล",
+    "itm_capacity": "45",
+    "itm_Unit": "กรัม",
+    "rid_receive_quantity": "9",
+    "itm_order_unit": "แพ็ค",
+    "rid_puantity_price": "600"
+}]

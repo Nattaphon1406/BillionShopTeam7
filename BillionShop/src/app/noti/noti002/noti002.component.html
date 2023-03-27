@@ -1,0 +1,48 @@
+<ion-app>
+    <div class="ion-page">
+        <app-header-with-back-no-search></app-header-with-back-no-search>
+        <ion-content class="background-content">
+            <ion-card id="warning">
+                <ion-card-content>
+                    <ion-grid>
+                        <ion-row class="head_noti">{{date}}</ion-row>
+                        <ion-row class="head_noti">รายการสินค้าใกล้หมดสต็อกสินค้า</ion-row>
+                        <ion-row></ion-row>
+                        <ion-row class="head_noti">จำนวน {{lengthItem}} รายการ</ion-row>
+                    </ion-grid>
+                </ion-card-content>
+                <ion-row class="list">รายการสินค้า</ion-row>
+                <ion-card *ngFor="let itm of notiContent">
+                    <ion-card-content>
+                        <ion-row>
+                            <ion-col class="details_noti" size="6">รหัสสินค้า:</ion-col>
+                            <ion-col>{{itm.itmCode}}</ion-col>
+                        </ion-row>
+                        <ion-row>
+                            <ion-col class="details_noti" size="6">ชื่อสินค้า:</ion-col>
+                            <ion-col>{{itm.itmName}} {{itm.capAmount}} {{itm.capUnit}}</ion-col>
+                        </ion-row>
+                        <ion-row>
+
+                        </ion-row>
+                        <ion-row>
+                            <ion-col class="details_noti" size="8">จำนวนที่คงเหลือ/{{itm.itmSellUnit}}:</ion-col>
+                            <ion-col size="2" pull="2">{{itm.itmAmount}} {{itm.itmSellUnit}}</ion-col>
+                        </ion-row>
+                    </ion-card-content>
+                </ion-card>
+            </ion-card>
+        </ion-content>
+        <ion-toolbar>
+            <ion-grid>
+                <ion-row>
+                    <ion-col size="10" offset="1">
+                        <div>
+                            <button class="link-add" (click)="btnlink()">สร้างใบสั่งซื้ออัตโนมัติ</button>
+                        </div>
+                    </ion-col>
+                </ion-row>
+            </ion-grid>
+        </ion-toolbar>
+    </div>
+</ion-app>

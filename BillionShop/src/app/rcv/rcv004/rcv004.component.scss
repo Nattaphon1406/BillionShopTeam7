@@ -1,0 +1,73 @@
+#card {
+    background: #eff5ef;
+    border-radius: 20px;
+    align-items: center;
+    color: #2C2C2C;
+    border: 20px;
+    border-left-style: solid;
+}
+
+.bold {
+    font-weight: bold;
+}
+
+#card {
+    background: #FFFFFF;
+    border-radius: 10px;
+    align-items: center;
+    &.status-success {
+        border-left-style: solid !important;
+        border-left-width: 10px !important;
+        border-left-color: #00B62E;
+    }
+    &.status-progress {
+        border-left-style: solid !important;
+        border-left-width: 10px !important;
+        border-left-color: #E57D03;
+    }
+    &.status-confirm {
+        border-left-style: solid !important;
+        border-left-width: 10px !important;
+        border-left-color: #6774EE;
+    }
+    &.status-cancel {
+        border-left-style: solid !important;
+        border-left-width: 10px !important;
+        border-left-color: #EA1010;
+    }
+}
+
+ion-icon {
+    --ionicon-stroke-width: 16px;
+}
+
+.input-srchbar-fill {
+    padding: 0px 40px;
+    display: flex;
+    border-radius: 10px;
+    background: #FFFFFF;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.12);
+    .srchbar {
+        --background: #FFFFFF;
+        --box-shadow: 0 !important;
+        color: #666666;
+        --placeholder-opacity: 2;
+    }
+    .iconsize {
+        width: 20px;
+        height: 20px;
+    }
+}
+
+p {
+    text-align: center;
+    font-style: normal;
+    font-size: 18px;
+    align-items: center;
+}
+
+.minmix {
+    height: 100px;
+    width: 100px;
+    align-items: center;
+}
